@@ -20,23 +20,125 @@
       showLevel()
     });
 
-    function showLevel() {
+    function calResult(){
+
+    }
+
+    function showLevel(){
       $.ajax({
-        type: 'GET',
-        url: '../static/json/mzLevel.json',
-        data: {},
-        success: function (data) {
-          let level = data
-          // for (let i = 0; i < level.length; i++) {
+        url:'../static/json/mzlevel.json',
+        dataType:'json',
+        success:function (data){
+          let level = data['mzLevel']
+          let point = calResult();
+
+          let temp_html = ``
+          if (point <= 2){
+            temp_html = `<div class="category1">
+                              <h2>나의 유형</h2>
+                              <p>${level[0]['level']}</p>
+                              <p>${level[0]['title']}</p>
+                              <P>${level[0]['desc']}</P>
+                            </div>`
+          } else if (point > 2 && point <= 4) {
+            temp_html = `<div class="category1">
+                              <h2>나의 유형</h2>
+                              <p>${level[1]['level']}</p>
+                              <p>${level[1]['title']}</p>
+                              <P>${level[1]['desc']}</P>
+                            </div>`
+          } else if (point > 4 && point <=6) {
+            temp_html = `<div class="category1">
+                              <h2>나의 유형</h2>
+                              <p>${level[2]['level']}</p>
+                              <p>${level[2]['title']}</p>
+                              <P>${level[2]['desc']}</P>
+                            </div>`
+          } else if (point > 6 && point <= 8) {
+            temp_html = `<div class="category1">
+                              <h2>나의 유형</h2>
+                              <p>${level[3]['level']}</p>
+                              <p>${level[3]['title']}</p>
+                              <P>${level[3]['desc']}</P>
+                            </div>`
+          } else {
+            temp_html = `<div class="category1">
+                              <h2>나의 유형</h2>
+                              <p>${level[4]['level']}</p>
+                              <p>${level[4]['title']}</p>
+                              <P>${level[4]['desc']}</P>
+                            </div>`
+          }
+          $('#cate').append(temp_html)
+        }
+      })
+    }
+
+
+          // for (let i = 0; i < level.length; i++){
           //   let usersLevel = level[i]['level']
           //   let levelTitle = level[i]['title']
           //   let levelDesc = level[i]['desc']
+          //   let range = level[i]['range']
+          //
+          //   let temp_html = `<div class="category1">
+          //                     <h2>나의 유형</h2>
+          //                     <p>${usersLevel}</p>
+          //                     <p>${levelTitle}</p>
+          //                     <P>${levelDesc}</P>
+          //                   </div>`
+          //   $('#cate').append(temp_html)
           // }
-          //alert(JSON.stringify(level))
-        }
-      });
-    }
-    $('#result').click(showLevel)
+
+
+    // function showLevel(){
+    //   $.ajax({
+    //     url:'../static/json/mzlevel.json',
+    //     dataType:'json',
+    //     success:function (data){
+    //       let level = data['mzLevel']
+    //       for (let i = 0; i < level.length; i++){
+    //         let usersLevel = level[i]['level']
+    //         let levelTitle = level[i]['title']
+    //         let levelDesc = level[i]['desc']
+    //
+    //         let temp_html = `<div class="category1">
+    //                           <h2>나의 유형</h2>
+    //                           <p>${usersLevel}</p>
+    //                           <p>${levelTitle}</p>
+    //                           <P>${levelDesc}</P>
+    //                         </div>`
+    //         $('#cate').append(temp_html)
+    //       }
+    //     }
+    //   })
+    // }
+
+
+    // function showLevel(){
+    //   $.ajax({
+    //     type:'GET',
+    //     url:'../static/json/mzlevel.json',
+    //     data:{},
+    //     dataType:'json',
+    //     success:function (data){
+    //       let level = data['mzLevel']
+    //
+    //       let usersLevel = level[2]['level']
+    //       let levelTitle = level[2]['title']
+    //       let levelDesc = level[2]['desc']
+    //
+    //       let temp_html = `<div class="category1">
+    //                         <h2>나의 유형</h2>
+    //                         <p>레벨${usersLevel}</p>
+    //                         <p>${levelTitle}</p>
+    //                         <P>${levelDesc}</P>
+    //                       </div>`
+    //       $('#cate').append(temp_html)
+    //       }
+    //   })
+    // }
+
 
 
 
