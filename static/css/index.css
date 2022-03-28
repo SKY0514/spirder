@@ -1,0 +1,116 @@
+/* * */
+* {
+  min-width: 350px;
+
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  color: black;
+
+}
+
+
+/* 레이아웃 */
+#wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+#header {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(52, 208, 149);
+}
+#main {
+  width: 100%;
+  height: 800px;
+  background-color: rgb(90, 105, 213);
+  position: relative;
+
+}
+#footer {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(75, 75, 75);
+}
+
+/* 헤더 */
+
+#header #logo {
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  height: 75px;
+  background-image: url(../images/free-icon-tarantula-4484333.png);
+  background-size: 100px 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+}
+/* 메인 */
+#main #section1 {
+  position: relative;
+  margin: 0 auto;
+  width: 40%;
+  top: 60px;
+  background-color: #fff;
+  height: 660px;
+  border-radius: 10px;
+}
+#main #section1 #h2{
+  display: inline-block;
+  margin: 25px;
+
+}
+#main #section1 p{
+  font-size: 20px;
+}
+#main #section1 img{
+  background-image: url(../images/giphy.gif);
+  margin: 0 auto;
+  display: inline-block;
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 350px;
+  margin: 30px auto;
+}
+#main #section1 a .start_btn{
+  min-width: 200px;
+  margin: 0 auto;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  border-bottom: 3px solid;
+  border-right: 3px solid;
+}
+#main #section1 .start_btn:hover{
+  cursor: pointer;
+}
+#main #section1 #share{
+  min-width:49px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+#main #section1 #share .share{
+  background-image: url(../images/293187_124155_579.jpg);
+  min-width:49px;
+  background-size: 50px 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 60px;
+}

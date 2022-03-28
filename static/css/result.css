@@ -1,0 +1,208 @@
+/* 베이직 */
+* {
+  font-family: 'Jua', sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* 레이아웃 */
+#wrap{ 
+  width: 100%;
+  background-color:red;
+}
+#header {
+  width: 100%;
+  background-color: rgb(52, 208, 149);
+}
+#main {
+  width: 100%;
+  background-color: rgb(90, 105, 213);
+}
+#footer {
+  width: 100%;
+  background-color: rgb(39, 39, 39);
+  position: relative;
+  height: 260px;
+}
+
+/* 헤더 */
+#header #logo {
+  display: inline-block;
+  background-image: url(../images/free-icon-tarantula-4484333.png);
+  background-size: 60% 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10%;
+  height: 80px;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(165, 97, 97);
+}
+
+/* 메인 */
+/* 섹션 1 */
+#main #sec1{
+  background-color: rgb(90, 105, 213);
+}
+#main #sec1 #point{
+  background-color: rgb(90, 105, 213);
+  height: 600px;
+  padding: 120px;
+}
+#main #sec1 #point h1{
+  background-color: #983079;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+#main #sec1 #point p{
+  background-color: #286779;
+  font-size: 120px;
+}
+
+/* 섹션 2 */
+#main #sec2{
+  background-color: wheat;
+}
+#main #sec2 #cate{
+  background-color: whitesmoke;
+  width: 70%;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  
+}
+#main #sec2 #cate .category1{
+  background-color: #286779;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  
+  
+}
+#main #sec2 #cate .category1 h2{
+  margin: 30px auto;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 100;
+
+}
+#main #sec2 #cate .category2{
+  background-color: #983079;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  margin-left: 40px ;
+}
+#main #sec2 #cate .category2 h2{
+  margin: 30px auto;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 100;
+}
+/* 섹션 3 */
+#main #sec3{
+  margin-top: 30px;
+  background-color: rebeccapurple;
+}
+#main #sec3 #wrong_answer{
+  background-color: whitesmoke;
+  width: 70%;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  
+}
+#main #sec3 #wrong_answer h2 {
+  margin: 30px auto;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 100;
+}
+#main #sec3 #wrong_answer .wr{
+  background-color: #286779;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+}
+#main #sec3 #wrong_answer .wrrate{
+  background-color: #983079;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  margin-left: 40px ;
+}
+
+/* 섹션 4 */
+#main #sec4{
+  background-color: #323098;
+  margin-top: 50px;
+}
+#main #sec4 .btns{
+ background-color: rgb(255, 255, 255);
+ width: 50%;
+ margin: 0 auto;
+}
+
+#main #sec4 .btns .btn1{
+ 
+  width: 50%;
+  height: 60px;
+  background-color: #3f7928;
+  display: inline-block;
+}
+#main #sec4 .btns .btn1 .rebtn{
+  border-radius: 20px;
+  font-size: 30px;
+  height: 100%;
+  width: 100%;
+}
+#main #sec4 .btns .btn2 {
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 50%;
+  height: 60px;
+  display: flex;
+  background-color: antiquewhite;
+  display: inline-block;
+}
+#main #sec4 .btns .btn2 .share{
+  border-radius: 20px;
+  width: 100%;
+  font-size: 30px;
+  height: 100%;
+}
+
+/* 푸터 */
+#footer .fot1{
+  position: absolute;
+  width: 80%;
+  margin: 0 200px;
+
+  height: 100%;
+  padding: 20px;
+}
+#footer .fot1 hr{
+  margin-top: 3px;
+  background-color:#dadada;
+  border: 1px solid ;
+}
+
+#footer .fot1 h3{
+  margin-top: 10px;
+  color: #999999;
+  font-weight: 100;
+  font-size: 26px;
+  text-align: initial;
+}
+#footer .fot1 .info{
+  text-align: initial;
+  font-family: sans-serif;
+  color: #888888;
+}

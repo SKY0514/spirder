@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MZ 언어 테스트 ㅣ spiders</title>
+  <link rel="stylesheet" href="../static/css/result.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <ㄱscript src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></ㄱscript>
+
+  <script type="text/javascript">
+    <!-- 테스트 중입니다-->
+    $(document).ready(function () {
+      showLevel()
+    });
+
+    function showLevel() {
+      $.ajax({
+        type: 'GET',
+        url: '../static/json/mzLevel.json',
+        data: {},
+        success: function (data) {
+          let level = data
+          // for (let i = 0; i < level.length; i++) {
+          //   let usersLevel = level[i]['level']
+          //   let levelTitle = level[i]['title']
+          //   let levelDesc = level[i]['desc']
+          // }
+          //alert(JSON.stringify(level))
+        }
+      });
+    }
+    $('#result').click(showLevel)
+
+
+
+    // function likeStar(name) {
+    //   $.ajax({
+    //     type: 'POST',
+    //     url: '/api/like',
+    //     data: {sample_give: '샘플데이터'},
+    //     success: function (response) {
+    //       alert(response['msg']);
+    //     }
+    //   });
+    // }
+
+  </script>
+
+</head>
+<body>
+//수정
+  <div id="wrap">
+    <header id="header">
+      <a id="logo">spiders</a>
+    </header>
+    <div id="main">
+      <section id="sec1">
+        <div id="point">
+          <h1>당신의 점수는?</h1>
+          <div class="result">
+
+          </div>
+          <p> ~~ 점</p>
+        </div>
+      </section>
+  
+      <section id="sec2">
+        <div id="cate">
+          <div class="category1"><h2>나의 유형</h2></div>
+          <div class="category2"><h2>제일 많이 나온 유형</h2></div>
+        </div>
+      </section>
+      
+      <section id="sec3">
+        <div id="wrong_answer">
+          <div class="wr"><h2>내가 틀린 답</h2> </div>
+          <div class="wrrate"><h2>가장 많은 오답률</h2></div>
+        </div>
+      </section>
+      <section id="sec4">
+       <div class="btns">
+          <form action='login_page.php' class="btn1">
+            <input class="rebtn" type='button' value='다시하기' onclick='alert("처음페이지로 돌아가기")'/>
+          </form>
+          <form action='login_page.php' class="btn2">
+            <input class="share" type='button' value='SNS 공유하기' onclick='alert("슬라이드")'/>
+          </form>
+       </div>
+      </section>
+      
+    </div>
+    
+    <footer id="footer">
+      <div class="fot1">
+        <h3>spiders</h3>
+        <hr>
+        <br>
+        <p class="info">배효정 &nbsp&nbsp&nbsp프론트엔드&nbsp&nbsp&nbspjehun0905@naver.com</p>
+        <p class="info">신기영 &nbsp&nbsp&nbsp프론트엔드&nbsp&nbsp e_1240@naver.com</p>
+        <p class="info">신승환 &nbsp&nbsp&nbsp프론트엔드&nbsp&nbsp shungwhan101@gmail.com</p>
+        <p class="info">원예찬 &nbsp&nbsp&nbsp백엔드&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp이메일</p>
+        <p class="info">이재호 &nbsp&nbsp&nbsp백엔드&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp spzulu75@naver.com</p>
+        <p class="info">이지희 &nbsp&nbsp&nbsp백엔드&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp e0whae@gmail.com</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
