@@ -6,12 +6,13 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style: none;
 }
 
 /* 레이아웃 */
-#wrap{ 
+#wrap{
   width: 100%;
-  background-color:red;
+  background-color:rgb(90, 105, 213);
 }
 #header {
   width: 100%;
@@ -48,128 +49,214 @@
   background-color: rgb(90, 105, 213);
 }
 #main #sec1 #point{
-  background-color: rgb(90, 105, 213);
+  background-image: url(../images/div2_img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 800px;
   height: 600px;
   padding: 120px;
 }
 #main #sec1 #point h1{
-  background-color: #983079;
-  font-size: 50px;
+
+  font-size: 70px;
   margin-bottom: 20px;
+  color: black;
 }
 #main #sec1 #point p{
-  background-color: #286779;
-  font-size: 120px;
-}
 
+  font-size: 120px;
+  color: black;
+}
+#main #sec1 #point p span{
+  color: rgb(110, 110, 110);
+}
 /* 섹션 2 */
 #main #sec2{
-  background-color: wheat;
+  background-color: rgb(90, 105, 213);
 }
 #main #sec2 #cate{
-  background-color: whitesmoke;
+  background-color: rgb(90, 105, 213);
   width: 70%;
-  height: 400px;
+  height: 500px;
   margin: 0 auto;
   display: flex;
-  
+
 }
 #main #sec2 #cate .category1{
-  background-color: #286779;
-  display: flex;
+  background-color: #ffffff;
   width: 50%;
   height: 100%;
   border-radius: 20px;
-  
-  
+  margin-right: 15px;
+
+
 }
 #main #sec2 #cate .category1 h2{
-  margin: 30px auto;
+  margin: 15px auto 5px;
   font-size: 40px;
-  color: #fff;
+  color: rgb(78, 78, 78);
+  font-weight: 100;
+
+
+}
+#main #sec2 #cate .category1 h3{
+  font-size: 30px;
+  color: rgb(121, 121, 121);
+  font-weight: 100;
+}
+#main #sec2 #cate .category1 .title{
+  font-size: 28px;
+  color: black;
+  font-weight: 100;
+}
+#main #sec2 #cate .category1 .desc{
+  margin: 0 10px;
+  font-size: 20px;
+  color: black;
+  font-weight: 100;
+}
+
+#main #sec2 #cate .category1 .cateimg{
+  background: url(../images/egg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 230px 300px;
+  margin: 0 auto;
+
+  width: 230px;
+  height: 300px;
+  margin-top: -10px;
+
+
+}
+
+
+
+#main #sec2 #cate .category2{
+  background-color: #ffffff;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  margin-left: 15px;
+}
+#main #sec2 #cate .category2 h2{
+  margin: 15px auto 5px;
+  font-size: 40px;
+  color: rgb(78, 78, 78);
   font-weight: 100;
 
 }
-#main #sec2 #cate .category2{
-  background-color: #983079;
-  display: flex;
-  width: 50%;
-  height: 100%;
-  border-radius: 20px;
-  margin-left: 40px ;
-}
-#main #sec2 #cate .category2 h2{
-  margin: 30px auto;
-  font-size: 40px;
-  color: #fff;
+#main #sec2 #cate .category2 h3{
+  font-size: 30px;
+  color: rgb(121, 121, 121);
   font-weight: 100;
+}
+#main #sec2 #cate .category2 .title{
+  font-size: 28px;
+  color: black;
+  font-weight: 100;
+}
+#main #sec2 #cate .category2 .desc{
+  margin: 0 10px;
+  font-size: 20px;
+  color: black;
+  font-weight: 100;
+}
+
+#main #sec2 #cate .category2 .cateimg{
+  background: url(../images/baby.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 230px 300px;
+  margin: 0 auto;
+
+  width: 230px;
+  height: 300px;
+  margin-top: -10px;
+
 }
 /* 섹션 3 */
 #main #sec3{
   margin-top: 30px;
-  background-color: rebeccapurple;
+  padding-top: 50px;
+  background-color: whitesmoke;
 }
 #main #sec3 #wrong_answer{
   background-color: whitesmoke;
   width: 70%;
-  height: 400px;
+  height: 500px;
   margin: 0 auto;
   display: flex;
-  
+
 }
 #main #sec3 #wrong_answer h2 {
-  margin: 30px auto;
+  margin: 15px auto 5px;
   font-size: 40px;
-  color: #fff;
+  color: rgb(78, 78, 78);
   font-weight: 100;
 }
 #main #sec3 #wrong_answer .wr{
-  background-color: #286779;
-  display: flex;
+  background-color: #ffffff;
   width: 50%;
   height: 100%;
   border-radius: 20px;
+  margin-right: 15px;
 }
+
+#main #sec3 #wrong_answer .wr .wrong_ul{
+  animation:slide 8s infinite;
+  text-align: right;
+}
+#main #sec3 #wrong_answer .wr .wrong_ul .wrong_li1{
+
+}
+#main #sec3 #wrong_answer .wr .wrong_ul .wrong_li2{
+
+}
+
+#main #sec3 #wrong_answer .wr .wrong_ul .wrong_li h4{}
+#main #sec3 #wrong_answer .wr .wrong_ul .wrong_li p{}
+#main #sec3 #wrong_answer .wr .wrong_ul .wrong_li p span{}
+
 #main #sec3 #wrong_answer .wrrate{
-  background-color: #983079;
-  display: flex;
+  background-color: #ffffff;
   width: 50%;
   height: 100%;
   border-radius: 20px;
-  margin-left: 40px ;
+  margin-left: 15px;
 }
+
 
 /* 섹션 4 */
 #main #sec4{
-  background-color: #323098;
-  margin-top: 50px;
+  padding: 50px;
+  background-color: whitesmoke;
+
 }
 #main #sec4 .btns{
- background-color: rgb(255, 255, 255);
  width: 50%;
- margin: 0 auto;
+ margin: 20px auto;
 }
 
-#main #sec4 .btns .btn1{
- 
-  width: 50%;
-  height: 60px;
-  background-color: #3f7928;
-  display: inline-block;
-}
-#main #sec4 .btns .btn1 .rebtn{
+#main #sec4 .btns a{
+  margin: 0 auto;
+  padding-top: 10px;
+  color: black;
+  display: block;
   border-radius: 20px;
+  width: 355px;
   font-size: 30px;
-  height: 100%;
-  width: 100%;
+  height: 60px;
+  background-color: rgb(52, 208, 149);
+  border: 2px solid black;
 }
+
 #main #sec4 .btns .btn2 {
   margin-top: 20px;
   border-radius: 10px;
   width: 50%;
   height: 60px;
   display: flex;
-  background-color: antiquewhite;
   display: inline-block;
 }
 #main #sec4 .btns .btn2 .share{
