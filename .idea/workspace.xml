@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e01bc394-d944-42e3-8069-e8a45e55468d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/baby.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/div2_img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/div3_img1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/div4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/egg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/free-icon-tarantula-4484333.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/inner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/json.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +99,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648470391362</updated>
       <workItem from="1648470393310" duration="2227000" />
-      <workItem from="1648550083022" duration="8283000" />
+      <workItem from="1648550083022" duration="8997000" />
     </task>
     <servers />
   </component>

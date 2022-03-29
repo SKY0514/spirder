@@ -1,5 +1,8 @@
 from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
+# with open('C:\Users\dnjsd\OneDrive\바탕 화면\스.코 팀프로젝트\mzQuestion.json','r') as f1
+#     json_data = json.load(f1)
+#     print(json.)
 
 from pymongo import MongoClient
 client = MongoClient('localhost', 27017)
