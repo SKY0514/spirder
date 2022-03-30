@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e01bc394-d944-42e3-8069-e8a45e55468d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/inner.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/inner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/json.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/json.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable" />
   </component>
   <component name="RunManager" selected="Flask server.Flask (app.py)">
     <configuration name="spider" type="PythonConfigurationType" factoryName="Python">
@@ -105,7 +106,7 @@
       <workItem from="1648600364315" duration="5213000" />
       <workItem from="1648611336966" duration="864000" />
       <workItem from="1648631934076" duration="684000" />
-      <workItem from="1648636330568" duration="1960000" />
+      <workItem from="1648636330568" duration="3627000" />
     </task>
     <servers />
   </component>
