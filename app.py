@@ -25,17 +25,25 @@ def resulthtml():
 ## API 역할을 하는 부분
 @app.route('/quiz', methods=['POST'])
 def save_choice():
-    users_choice = request.form['']
+    answer_receive = request.form['answer_give']
+
+    print(answer_receive)
+
+    doc = {
+        'answer': answer_receive
+    }
+
+    db.mzQuiz.insert_one(doc)
 
 
     return jsonify({'msg': '이 요청은 POST!'})
 
-
-@app.route('/review', methods=['GET'])
-def read_reviews():
-    sample_receive = request.args.get('sample_give')
-    print(sample_receive)
-    return jsonify({'msg': '이 요청은 GET!'})
+#
+# @app.route('/review', methods=['GET'])
+# def read_reviews():
+#     sample_receive = request.args.get('sample_give')
+#     print(sample_receive)
+#     return jsonify({'msg': '이 요청은 GET!'})
 
 
 

@@ -24,6 +24,16 @@
         <script src="../static/js/inner.js"></script>
         <script src="../static/js/json.js"></script>
 
+    <script>
+
+    <!-- 버튼 클릭 시 벨류값 불러오기 test-->
+       $('.btn').click(function (){
+           let answer = $(this).val();
+           console.log(answer)
+       })
+
+    </script>
+
         <title>layout</title>
 
 
@@ -43,10 +53,10 @@
             </div>
 
             <div id="div3">
-                    <button onclick="" id="button1" value="01">1번 문제</button>
-                    <button id="button2" value="02">2번 문제</button>
-                    <button id="button3" value="03">3번 문제</button>
-                    <button id="button4" value="04">4번 문제</button>
+                    <button class="btn" id="button1" value="01">1번 문제</button>
+                    <button class="btn" id="button2" value="02">2번 문제</button>
+                    <button class="btn" id="button3" value="03">3번 문제</button>
+                    <button class="btn" id="button4" value="04">4번 문제</button>
             </div>
             <div id="divtest">
             </div>
