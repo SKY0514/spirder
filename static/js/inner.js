@@ -1,46 +1,58 @@
-document.write("<script src='json.js'></script>")
 
-//문제 항목 4가지 출력
-function addItem(itemText, qIdx) {
+const select = []; //선택한 답안 저장 배열
+const endItem = 10; //문제 개수
+
+
+//addItem() 문제 항목 4가지 출력 함수
+function addItem(itemText, qIdx, iIdx) {
+    //0번쨰의 문제 항목을 HTML에서 class이름이 qBox인 곳에 출력
+    //createElement를 이용하여 문제 항목의 button을 생성
     var item = document.querySelector('.iBox');
-    var itemList = document.createElement('button');
-    itemList.classList.add('iList');
-    itemList.classList.add('my-1');
-    itemList.classList.add('py-4')
-    item.appendChild(itemList);
-    itemList.innerHTML = itemText;
+    var itemBtn = document.createElement('button');
+    //만든 버튼들에는 class나 id가 없기 때문에 모든 버튼을 선택하기 위해 iList란 class값을 넣어준다.
+    itemBtn.classList.add('iList');
+    //버튼 크기 및 간격 조정
+    itemBtn.classList.add('my-1');
+    itemBtn.classList.add('py-4');
 
-    itemList.addEventListener("click", function () {
-        var children = document.querySelectorAll('.iList');
-        for (let i = 0; i < children.length; i++) {
-            children[i].disabled = true;
-            children[i].style.display = 'none';
+    //appendChild을 사용하여 <div> iBox 태그 내부에 itemBtn을 추가
+    item.appendChild(itemBtn);
+    //0번쨰의 문제 항목을 버튼안에 넣는다.
+    itemBtn.innerHTML = itemText;
+
+    //addEventListener: 지정한 이벤트가 대상에 전달될 떄마다 호출할 함수 설정
+    //버튼을 누르면 다음 문제가 나올수 있도록 한다.
+    itemBtn.addEventListener("click", function () {
+        var itemBtnAll = document.querySelectorAll('.iList');
+        for (let i = 0; i < itemBtnAll.length; i++) {
+            itemBtnAll[i].disabled = true; //버튼 비 활성화
+            itemBtnAll[i].style.display = 'none'; //버튼 사라짐
         }
-        setInnerText(++qIdx);
+        //버튼을 선택할 때 마다 그 버튼의 iIdx값을 넣는다.
+        select[qIdx] = iIdx;
+        addQuestion(++qIdx); //문제 출력 함수의 qIdx를 1증가해 다음 문제 불러옴
     }, false);
 }
 
-//버튼 누르면 전체 문제 출력
-function setInnerText(qIdx) {
-    // const element1 = document.getElementById('div2_text');
-    // const element2 = document.getElementById('div3');
-    //
-    // element1.innerHTML = mzQuestion[0]["question"];
-    // element2.innerHTML = `<button id="button1">${mzQuestion[0]["item"][0]}</button>
-    //                 <button id="button2">${mzQuestion[0]["item"][1]}</button>
-    //                 <button id="button3">${mzQuestion[0]["item"][2]}</button>
-    //                 <button id="button4">${mzQuestion[0]["item"][3]}</button>`;
+//addQuestion() 문제 출력 함수
+function addQuestion(qIdx) {
+    //마지막 문제를 풀면 내가 선택한 답들을 출력
+    if (qIdx === endItem) {
+        console.log(select);
+    }
+    //0번쨰의 문제를 HTML에서 class이름이 qBox인 곳에 출력
     var question = document.querySelector('.qBox');
     question.innerHTML = mzQuestion[qIdx]["question"];
+    //0번쨰의 item들을 출력해 addItem 함수에 파라미터으로 넣는다.
+    //이떄 i는 몇번쨰의 문제인지의 값을 의미하기 때문에 addItem의 파라미터로 넣는다.
     for (let i in mzQuestion[qIdx]["item"]) {
-        addItem(mzQuestion[qIdx]["item"][i]["list"], qIdx);
+        addItem(mzQuestion[qIdx]["item"][i]["list"], qIdx, i);
     }
-
 }
 
-//setInnerText의 버튼 함수
+//addQuestion() 실행 함수 버튼
 function begin() {
     let qIdx = 0;
-    setInnerText(qIdx);
+    addQuestion(qIdx);
 
 }

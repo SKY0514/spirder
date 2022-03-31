@@ -24,7 +24,8 @@ def resulthtml():
 
 ## API 역할을 하는 부분
 @app.route('/quiz', methods=['POST'])
-def save_choice():
+def save_answer():
+    print('test')
     answer_receive = request.form['answer_give']
 
     print(answer_receive)
@@ -35,8 +36,7 @@ def save_choice():
 
     db.mzQuiz.insert_one(doc)
 
-
-    return jsonify({'msg': '이 요청은 POST!'})
+    return jsonify({'msg': '저장 완료!'})
 
 #
 # @app.route('/review', methods=['GET'])

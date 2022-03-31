@@ -1,109 +1,62 @@
 <!DOCTYPE html>
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../static/css/styles.css">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="../static/css/styles.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script src = "../static/js/main.js "></script>
+        <script src = "../static/js/inner.js"></script>
+        <script src = "../static/js/json.js"></script>
+        <title>layout</title>
+        <style>
+            .iList {
 
+            }
+            .iBox {
 
-    <script src="../static/js/main.js"></script>
-    <script src="../static/js/inner.js"></script>
-    <script src="../static/js/json.js"></script>
+            }
+        </style>
 
-    <script>
+    </head>
 
-        <!-- 버튼 클릭 시 벨류값 불러오기 test-->
-        $('.btn').click(function () {
-            let answer = $(this).val();
-            console.log(answer)
-        })
+    <body>
+        <div id="all_layout">
+            <div id="div1">
+               <a href="#"><img id="title_image" src="../static/images/title1.png"></a>
+            </div>
 
-    </script>
+            <div id="div2" class="qna">
+                <div class="background_image">
+                    <h1 id = "div2_text" class = "qBox"> 문제 삽입 </h1>
+                </div>
+            </div>
 
-    <title>layout</title>
-    <style>
-        .iList {
+            <div class = "iBox"></div>
 
-        }
+            <div id="divtest">
+                <a href="result.html"><button class="start_btn" onclick="getAnswer()">결과보기</button></a>
+            </div>
+            <input type = 'button' value="문제보기" onclick="begin()" />
 
-        .iBox {
+            <div id="div4">
 
-        }
-    </style>
-
-
-</head>
-
- <body>
-     <div id="all_layout">
-         <div id="div1">
-             <a href="#"><img id="title_image" src="../static/images/title1.png"></a>
-         </div>
-
-         <div id="div2" class="qna">
-             <div class="background_image">
-                 <h1 id="div2_text" class="qBox"> 문제 삽입 </h1>
-             </div>
-         </div>
-
-         <div class="iBox"></div>
-
-         <div id="divtest">
-             <a href="result.html">
-                 <button class="start_btn">결과보기</button>
-             </a>
-         </div>
-         <input type='button' value="문제보기" onclick="begin()"/>
-
-         <div id="div4">
-         </div>
-     </div>
- </body>
+        </div>
+        </div>
 
 
-<!--<body>-->
-<!--    <div id="all_layout">-->
-<!--        <div id="div1">-->
-<!--            <a href="#"><img id="title_image" src="../static/images/title1.png"></a>-->
-<!--        </div>-->
-<!--    -->
-<!--        <div id="div2">-->
-<!--            <div class="background_image">-->
-<!--                <h1 id="div2_text"> 문제 삽입 </h1>-->
-<!--                <a href="result.html">-->
-<!--                    <button class="start_btn">결과보기</button>-->
-<!--                </a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    -->
-<!--        <div id="div3">-->
-<!--            <button class="btn" id="button1" value="01">1번 문제</button>-->
-<!--            <button class="btn" id="button2" value="02">2번 문제</button>-->
-<!--            <button class="btn" id="button3" value="03">3번 문제</button>-->
-<!--            <button class="btn" id="button4" value="04">4번 문제</button>-->
-<!--        </div>-->
-<!--        <div id="divtest">-->
-<!--        </div>-->
-<!--        <input type='button' value="innerHTML" onclick="setInnerText()"/>-->
-<!--    -->
-<!--    -->
-<!--        <div id="div4">-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</body>-->
-
+</body>
 </html>
