@@ -1,151 +1,62 @@
-//result 페이지의 내가 틀린 답, 정답 오답에 따른 색상 변화
-let problems = document.querySelector('.wrong_ul')
 
-if ($('.wrong_ul>.wrong_li1>p>span').text() == 1){
-  document.querySelector('.wrong_li1').style.backgroundColor = 'white'
-} else {
-  document.querySelector('.wrong_li1').style.backgroundColor = '#ffa'
+let problems = document.querySelector('.wrong_ul');
+// 클라이언트 선택 답 내려주기
+// anserNm.append(1)
+
+// 답안체크
+for(let i = 0; i <= 3; i++){
+  if ($('.anserNm1').text() == mzQuestion[0]['answer'] +1){
+    document.querySelector('.wrong_li').style.backgroundColor = 'white'
+  } else {
+    document.querySelector('.wrong_li').style.backgroundColor = '#ffa'
+  };
+}
+
+// 오답 문제리스트
+for(let i = 0; i <= 9; i++){
+  let ul = document.querySelector('.wrrate_ul') 
+  var pro = mzQuestion[i]['question']
+  // let tm = `$<li class="wrrate_li">
+  // <h4>${pro}</h4>
+  // <p>오답 <span>3</span>번 <span>억까</span> 47%</p>
+  // </li>`
+  // ul.appendChild(tm)
+
+ 
+
 }
 
 
-<!-- 테스트 중입니다-->
-$(document).ready(function () {
-    showLevel()
-});
+let total = document.querySelector('.total');
+let totalPoint = 80;
 
-function calResult() {
-
+total.append(totalPoint)
+let level = document.querySelector('.level')
+let title = document.querySelector('.title')
+let desc = document.querySelector('.desc')
+if(totalPoint <= 20){
+  level.append(mzLevel[0]["level"])
+  title.append(mzLevel[0]["title"])
+  desc.append(mzLevel[0]["desc"])
+}else if(totalPoint <= 40){
+  level.append(mzLevel[1]["level"])
+  title.append(mzLevel[1]["title"])
+  desc.append(mzLevel[1]["desc"])
+}else if(totalPoint <= 60){
+  level.append(mzLevel[2]["level"])
+  title.append(mzLevel[2]["title"])
+  desc.append(mzLevel[2]["desc"])
+}else if(totalPoint <= 80){
+  level.append(mzLevel[3]["level"])
+  title.append(mzLevel[3]["title"])
+  desc.append(mzLevel[3]["desc"])
+}else if(totalPoint <= 100){
+  level.append(mzLevel[4]["level"])
+  title.append(mzLevel[4]["title"])
+  desc.append(mzLevel[4]["desc"])
 }
-
-function showLevel() {
-  $.ajax({
-      url: '../static/json/mzlevel.json',
-      dataType: 'json',
-      success: function (data) {
-          let level = data['mzLevel']
-          let point = calResult();
-
-          let temp_html = ``
-          if (point <= 2) {
-              temp_html = `<div class="category1">
-                  <h2>나의 유형</h2>
-                  <h3>level ${level[0]['level']}</h3>
-                  <P class="title">${level[0]['title']}</P>
-                  <P class="desc">${level[0]['desc']}</P>
-                  <div class="cateimg"></div>
-                </div>`
-          } else if (point > 2 && point <= 4) {
-              temp_html = `<div class="category1">
-                  <h2>나의 유형</h2>
-                  <h3>level ${level[1]['level']}</h3>
-                  <P class="title">${level[1]['title']}</P>
-                  <P class="desc">${level[1]['desc']}</P>
-                  <div class="cateimg"></div>
-                </div>`
-          } else if (point > 4 && point <= 6) {
-              temp_html = `<div class="category1">
-                  <h2>나의 유형</h2>
-                  <h3>level ${level[2]['level']}</h3>
-                  <P class="title">${level[2]['title']}</P>
-                  <P class="desc">${level[2]['desc']}</P>
-                  <div class="cateimg"></div>
-                </div>`
-          } else if (point > 6 && point <= 8) {
-              temp_html = `<div class="category1">
-                  <h2>나의 유형</h2>
-                  <h3>level ${level[3]['level']}</h3>
-                  <P class="title">${level[3]['title']}</P>
-                  <P class="desc">${level[3]['desc']}</P>
-                  <div class="cateimg"></div>
-                </div>`
-          } else {
-              temp_html = `<div class="category1">
-                  <h2>나의 유형</h2>
-                  <h3>level ${level[4]['level']}</h3>
-                  <P class="title">${level[4]['title']}</P>
-                  <P class="desc">${level[4]['desc']}</P>
-                  <div class="cateimg"></div>
-                </div>`
-          }
-          $('#cate').append(temp_html)
-      }
-  })
-}
+  
+let anserNm = document.querySelector('.anserNm')
 
 
 
-// for (let i = 0; i < level.length; i++){
-        //   let usersLevel = level[i]['level']
-        //   let levelTitle = level[i]['title']
-        //   let levelDesc = level[i]['desc']
-        //   let range = level[i]['range']
-        //
-        //   let temp_html = `<div class="category1">
-        //                     <h2>나의 유형</h2>
-        //                     <p>${usersLevel}</p>
-        //                     <p>${levelTitle}</p>
-        //                     <P>${levelDesc}</P>
-        //                   </div>`
-        //   $('#cate').append(temp_html)
-        // }
-
-
-        // function showLevel(){
-        //   $.ajax({
-        //     url:'../static/json/mzlevel.json',
-        //     dataType:'json',
-        //     success:function (data){
-        //       let level = data['mzLevel']
-        //       for (let i = 0; i < level.length; i++){
-        //         let usersLevel = level[i]['level']
-        //         let levelTitle = level[i]['title']
-        //         let levelDesc = level[i]['desc']
-        //
-        //         let temp_html = `<div class="category1">
-        //                           <h2>나의 유형</h2>
-        //                           <p>${usersLevel}</p>
-        //                           <p>${levelTitle}</p>
-        //                           <P>${levelDesc}</P>
-        //                         </div>`
-        //         $('#cate').append(temp_html)
-        //       }
-        //     }
-        //   })
-        // }
-
-
-        // function showLevel(){
-        //   $.ajax({
-        //     type:'GET',
-        //     url:'../static/json/mzlevel.json',
-        //     data:{},
-        //     dataType:'json',
-        //     success:function (data){
-        //       let level = data['mzLevel']
-        //
-        //       let usersLevel = level[2]['level']
-        //       let levelTitle = level[2]['title']
-        //       let levelDesc = level[2]['desc']
-        //
-        //       let temp_html = `<div class="category1">
-        //                         <h2>나의 유형</h2>
-        //                         <p>레벨${usersLevel}</p>
-        //                         <p>${levelTitle}</p>
-        //                         <P>${levelDesc}</P>
-        //                       </div>`
-        //       $('#cate').append(temp_html)
-        //       }
-        //   })
-        // }
-
-
-        // function likeStar(name) {
-        //   $.ajax({
-        //     type: 'POST',
-        //     url: '/api/like',
-        //     data: {sample_give: '샘플데이터'},
-        //     success: function (response) {
-        //       alert(response['msg']);
-        //     }
-        //   });
-        // }

@@ -7,16 +7,20 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  
 }
 
 /* 레이아웃 */
-#wrap{
+
+#wrap{ 
   width: 100%;
   background-color:rgb(90, 105, 213);
+  
 }
 #header {
   width: 100%;
   background-color: rgb(52, 208, 149);
+  margin: 0;
 }
 #main {
   width: 100%;
@@ -55,15 +59,16 @@
   background-size: 800px;
   height: 600px;
   padding: 120px;
+  margin: 0 auto;
 }
 #main #sec1 #point h1{
-
+  
   font-size: 70px;
   margin-bottom: 20px;
   color: black;
 }
 #main #sec1 #point p{
-
+  
   font-size: 120px;
   color: black;
 }
@@ -80,7 +85,7 @@
   height: 500px;
   margin: 0 auto;
   display: flex;
-
+  
 }
 #main #sec2 #cate .category1{
   background-color: #ffffff;
@@ -88,21 +93,22 @@
   height: 100%;
   border-radius: 20px;
   margin-right: 15px;
-
-
+  
+  
 }
 #main #sec2 #cate .category1 h2{
   margin: 15px auto 5px;
   font-size: 40px;
   color: rgb(78, 78, 78);
   font-weight: 100;
-
+  
 
 }
 #main #sec2 #cate .category1 h3{
   font-size: 30px;
   color: rgb(121, 121, 121);
   font-weight: 100;
+  margin-top: -15px ;
 }
 #main #sec2 #cate .category1 .title{
   font-size: 28px;
@@ -110,10 +116,12 @@
   font-weight: 100;
 }
 #main #sec2 #cate .category1 .desc{
-  margin: 0 10px;
+  margin: 0 auto;
   font-size: 20px;
   color: black;
   font-weight: 100;
+  width: 80%;
+  
 }
 
 #main #sec2 #cate .category1 .cateimg{
@@ -122,12 +130,12 @@
   background-repeat: no-repeat;
   background-size: 230px 300px;
   margin: 0 auto;
-
+  
   width: 230px;
   height: 300px;
   margin-top: -10px;
 
-
+  
 }
 
 
@@ -169,7 +177,7 @@
   background-repeat: no-repeat;
   background-size: 230px 300px;
   margin: 0 auto;
-
+  
   width: 230px;
   height: 300px;
   margin-top: -10px;
@@ -184,10 +192,10 @@
 #main #sec3 #wrong_answer{
   background-color: whitesmoke;
   width: 70%;
-  height: 500px;
+  height: 600px;
   margin: 0 auto;
   display: flex;
-
+  
 }
 #main #sec3 #wrong_answer h2 {
   margin: 15px auto 5px;
@@ -207,11 +215,12 @@
   animation:slide 8s infinite;
   text-align: right;
 }
-#main #sec3 #wrong_answer .wr .wrong_ul .wrong_li1{
-
+#main #sec3 #wrong_answer .wr .wrong_ul li{
+  width: 80%;
+  margin: 0 auto;
 }
 #main #sec3 #wrong_answer .wr .wrong_ul .wrong_li2{
-
+ 
 }
 
 #main #sec3 #wrong_answer .wr .wrong_ul .wrong_li h4{}

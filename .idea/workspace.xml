@@ -1,32 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e01bc394-d944-42e3-8069-e8a45e55468d" name="Changes" comment="">
+    <list default="true" id="7f4c592f-db89-4b11-bbbe-c7fc00da8b55" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/spider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spider.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/css/main_ani.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main_ani.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/css/result.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/293187_124155_579.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/baby.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/baby.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/div2_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/div3_img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/div4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/egg.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/egg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/facebook-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/facebook-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/free-icon-tarantula-4484333.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/instar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/instar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/kakao.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/kakao.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/start.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/start.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/images/무지개.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/무지개.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/js/json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/js/mzQuestion.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/js/result.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_01/result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/baby.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/div2_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/div3_img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/div4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/egg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/free-icon-tarantula-4484333.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/result.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/json.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/json.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/result.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
-  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
-    <envs>
-      <env key="FLASK_APP" value="app" />
-    </envs>
-    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
-    <option name="myEnvs">
-      <map>
-        <entry key="FLASK_APP" value="app" />
-      </map>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,7 +55,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="270wcZaWOjoMAXRFtWxYtmtVtkY" />
+  <component name="ProjectId" id="27BBjHO6No29kHvSzqLHVGswsqF" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,9 +64,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Flask server.Flask (app.py)">
     <configuration name="spider" type="PythonConfigurationType" factoryName="Python">
@@ -94,50 +113,19 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e01bc394-d944-42e3-8069-e8a45e55468d" name="Changes" comment="" />
-      <created>1648470391362</created>
+      <changelist id="7f4c592f-db89-4b11-bbbe-c7fc00da8b55" name="Changes" comment="" />
+      <created>1648783732021</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1648470391362</updated>
-      <workItem from="1648470393310" duration="2227000" />
-      <workItem from="1648550083022" duration="16245000" />
-      <workItem from="1648600364315" duration="5213000" />
-      <workItem from="1648611336966" duration="864000" />
-      <workItem from="1648631934076" duration="684000" />
-      <workItem from="1648636330568" duration="6759000" />
-      <workItem from="1648719567983" duration="6636000" />
-      <workItem from="1648737284656" duration="4052000" />
-      <workItem from="1648779278929" duration="1866000" />
+      <updated>1648783732021</updated>
+      <workItem from="1648783734002" duration="3243000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/static/js/inner.js</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/spider$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1648780713452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/spider$spider.coverage" NAME="spider Coverage Results" MODIFIED="1648470422693" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/spider$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1648787514415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
