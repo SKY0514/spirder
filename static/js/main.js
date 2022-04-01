@@ -44,7 +44,6 @@ function addQuestion(qIdx) {
     if (qIdx === endItem) {
         console.log(select);
         window.location = 'result.html';
-
     }
     //0번쨰의 문제를 HTML에서 class이름이 problem_text인 곳에 출력
     var question = document.querySelector('#problem_text');
@@ -72,7 +71,7 @@ $(document).ready(function () {
 });
 
 function getAnswer() {
-    let answer = select
+    let answer = select;
         console.log(answer)
 
     $.ajax({
@@ -81,7 +80,6 @@ function getAnswer() {
         data: {answer_give: answer},
         success: function (response) {
             alert(response["msg"]);
-            window.location.reload();
         }
     })
 }

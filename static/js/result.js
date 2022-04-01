@@ -21,9 +21,6 @@ for(let i = 0; i <= 9; i++){
   // <p>오답 <span>3</span>번 <span>억까</span> 47%</p>
   // </li>`
   // ul.appendChild(tm)
-
- 
-
 }
 
 

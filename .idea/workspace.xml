@@ -2,47 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f4c592f-db89-4b11-bbbe-c7fc00da8b55" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spider.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/css/main_ani.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main_ani.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/css/result.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/293187_124155_579.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/baby.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/baby.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/div2_img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/div3_img1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/div4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/egg.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/egg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/facebook-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/facebook-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/free-icon-tarantula-4484333.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/instar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/instar.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/kakao.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/kakao.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/start.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/start.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/images/무지개.gif" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/무지개.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/js/json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/js/mzQuestion.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/js/result.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_01/result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/baby.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/div2_img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/div3_img1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/div4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/egg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/free-icon-tarantula-4484333.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/result.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/json.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/json.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/result.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/result.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648783732021</updated>
-      <workItem from="1648783734002" duration="3243000" />
+      <workItem from="1648783734002" duration="11766000" />
     </task>
     <servers />
   </component>
@@ -126,6 +88,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/spider$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1648787514415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/spider$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1648807598939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
