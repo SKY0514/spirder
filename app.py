@@ -26,7 +26,7 @@ def resulthtml():
 @app.route('/quiz', methods=['POST'])
 def save_answer():
     print('test')
-    answer_receive = request.form['answer_give']
+    answer_receive = request.form.getlist('answer_give[]')
 
     print(answer_receive)
 
