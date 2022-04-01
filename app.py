@@ -23,7 +23,7 @@ def resulthtml():
 
 
 ## API 역할을 하는 부분
-@app.route('/quiz', methods=['POST'])
+@app.route("/quiz", methods=['POST'])
 def save_answer():
     print('test')
     answer_receive = request.form['answer_give']
