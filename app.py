@@ -22,6 +22,7 @@ def resulthtml():
 ## 사용자의 답안 서버에 저장
 @app.route("/quiz", methods=['POST'])
 def save_answer():
+    print('test')
     answer_receive = request.form.getlist('answer_give[]')
 
     print(answer_receive)

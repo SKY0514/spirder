@@ -130,7 +130,7 @@ let anserNm = document.querySelector('.anserNm')
 
 
 
-
+// 서버에 저장했던 사용자의 답안 불러오기
 $(document).ready(function () {
     showAnswer()
 });
