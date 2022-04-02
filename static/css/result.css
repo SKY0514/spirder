@@ -125,19 +125,31 @@
 }
 
 #main #sec2 #cate .category1 .cateimg{
-  background: url(../images/egg.png);
+
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 230px 300px;
+  background-size: 400px 300px;
   margin: 0 auto;
-  
-  width: 230px;
+
+  width: 300px;
   height: 300px;
   margin-top: -10px;
 
-  
-}
 
+}
+#main #sec2 #cate .category2 .title1{
+  font-size: 28px;
+  color: black;
+  font-weight: 100;
+}
+#main #sec2 #cate .category2 .desc1{
+  margin: 0 auto;
+  font-size: 20px;
+  color: black;
+  font-weight: 100;
+  width: 80%;
+
+}
 
 
 #main #sec2 #cate .category2{
@@ -152,12 +164,12 @@
   font-size: 40px;
   color: rgb(78, 78, 78);
   font-weight: 100;
-
 }
 #main #sec2 #cate .category2 h3{
   font-size: 30px;
   color: rgb(121, 121, 121);
   font-weight: 100;
+  margin-top: -15px ;
 }
 #main #sec2 #cate .category2 .title{
   font-size: 28px;
@@ -172,16 +184,24 @@
 }
 
 #main #sec2 #cate .category2 .cateimg{
-  background: url(../images/baby.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 230px 300px;
+  background-size: 400px 300px;
   margin: 0 auto;
-  
-  width: 230px;
+
+  width: 300px;
   height: 300px;
   margin-top: -10px;
+}
+#main #sec2 #cate .category2 .cateimg1{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 400px 300px;
+  margin: 0 auto;
 
+  width: 300px;
+  height: 300px;
+  margin-top: -10px;
 }
 /* 섹션 3 */
 #main #sec3{
