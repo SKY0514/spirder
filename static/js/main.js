@@ -1,7 +1,7 @@
 
 // animation 구현 추가하기
 
-var select = []; //선택한 답안 저장 배열
+const select = []; //선택한 답안 저장 배열
 const endItem = 10; //문제 개수
 
 
@@ -42,7 +42,7 @@ function addItem(itemText, qIdx, iIdx) {
 function addQuestion(qIdx) {
     //마지막 문제를 풀면 내가 선택한 답들을 출력
     if (qIdx === endItem) {
-        getAnswer(select);
+        console.log(select);
         window.location = 'result.html';
     }
     //0번쨰의 문제를 HTML에서 class이름이 problem_text인 곳에 출력

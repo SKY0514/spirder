@@ -62,7 +62,7 @@
   width: 40%;
   top: 60px;
   background-color: #fff;
-  height: 640px;
+  height: 600px;
   border-radius: 10px;
 }
 #main #section1 #h2{
@@ -74,7 +74,7 @@
   font-size: 20px;
 }
 #main #section1 #start{
-  background-image: url(../images/start.gif);
+  background-image: url(../images/giphy.gif);
   margin: 0 auto;
   display: inline-block;
   background-size: 350px;

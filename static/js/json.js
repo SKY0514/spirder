@@ -5,35 +5,35 @@ const mzLevel = [
       "range": 0,
       "title": "어떤 단어든 내겐 듣보잡",
       "desc": "당신의 신조어 수준은 아직 태어나기 전. 스파이더스와 함께 새로 태어나요~",
-      "image": ""
+      "image":""
     },
     {
       "level": 2,
       "range": 20,
       "title": "이 정도면 나도 킹왕짱",
       "desc": "아 응애에요~ 당신의 신조어 수준은 신생아.",
-      "image": ""
+      "image":""
     },
     {
       "level": 3,
       "range": 40,
       "title": "라떼는 말이야 이런 말 없었어",
       "desc": "당신은 분명 X세대! MZ세대와 소통하려면 좀 더 분발하세요~",
-      "image": ""
+      "image":""
     },
     {
       "level": 4,
       "range": 60,
       "title": "이젠 나도 유행어 알딱잘깔센",
       "desc": "이 정도면 당신은 MZ세대와 말이 통하는 수준이군요. 아주 칭찬해~",
-      "image": ""
+      "image":""
     },
     {
       "level": 5,
       "range": 80,
       "title": "홀리몰리 과카몰리 로보카폴리 유행어 전문가",
       "desc": "당신은 말이 필요없는 진정한 MZ세대! 뭐든지 다 알고 있는 당신은 진정한 천재군요.",
-      "image": ""
+      "image":""
     }
   ]
   const mzQuestion = [
