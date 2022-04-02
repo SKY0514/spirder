@@ -64,7 +64,7 @@ function begin() {
 }
 
 
-
+//사용자의 답안 서버로 저장하기 위해 보내기
 function getAnswer(select) {
     var answer = select;
         console.log(answer);
