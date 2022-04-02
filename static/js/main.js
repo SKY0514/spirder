@@ -1,7 +1,7 @@
 
-// animation 구현 추가하기 
+// animation 구현 추가하기
 
-const select = []; //선택한 답안 저장 배열
+var select = []; //선택한 답안 저장 배열
 const endItem = 10; //문제 개수
 
 
@@ -42,7 +42,7 @@ function addItem(itemText, qIdx, iIdx) {
 function addQuestion(qIdx) {
     //마지막 문제를 풀면 내가 선택한 답들을 출력
     if (qIdx === endItem) {
-        console.log(select);
+        getAnswer(select);
         window.location = 'result.html';
     }
     //0번쨰의 문제를 HTML에서 class이름이 problem_text인 곳에 출력
@@ -64,22 +64,17 @@ function begin() {
 }
 
 
-
-
-$(document).ready(function () {
-    getAnswer()
-});
-
-function getAnswer() {
-    let answer = select;
-        console.log(answer)
-
+//사용자의 답안 서버로 저장하기 위해 보내기
+function getAnswer(select) {
+    var answer = select;
+        console.log(answer);
     $.ajax({
         type: "POST",
         url: "/quiz",
         data: {answer_give: 'answer'},
         success: function (response) {
-            alert(response["msg"]);
+            alert(response['msg'])
         }
     })
 }
+

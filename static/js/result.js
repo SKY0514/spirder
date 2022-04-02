@@ -57,20 +57,24 @@ let anserNm = document.querySelector('.anserNm')
 
 
 
+
+
 $(document).ready(function () {
-    getAnswer()
+    showAnswer()
 });
 
-function getAnswer() {
-    let answer = select;
-        console.log(answer)
-
+function showAnswer() {
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "/quiz",
-        data: {answer_give: answer},
+        data: {},
         success: function (response) {
-            alert(response["msg"]);
+            let answers = response['all_answers']
+            // for (let i = 0; i < answers.length; i++){
+            //     let numbers_users = answers[i]
+            //     console.log(numbers_users)
+            // }
+                console.log(answers)
         }
     })
 }
