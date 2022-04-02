@@ -71,7 +71,7 @@ function getAnswer(select) {
     $.ajax({
         type: "POST",
         url: "/quiz",
-        data: {answer_give: answer},
+        data: {answer_give: 'answer'},
         success: function (response) {
             alert(response['msg'])
         }

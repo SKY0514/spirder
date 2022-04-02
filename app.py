@@ -20,7 +20,7 @@ def resulthtml():
 
 
 ## 사용자의 답안 서버에 저장
-@app.route('/quiz', methods=['POST'])
+@app.route("/quiz", methods=['POST'])
 def save_answer():
     answer_receive = request.form.getlist('answer_give[]')
 
