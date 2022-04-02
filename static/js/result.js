@@ -58,6 +58,7 @@ let anserNm = document.querySelector('.anserNm')
 
 
 
+
 $(document).ready(function () {
     showAnswer()
 });
