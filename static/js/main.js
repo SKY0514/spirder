@@ -65,23 +65,16 @@ function begin() {
 
 
 
-
-$(document).ready(function () {
-    getAnswer()
-});
-
-
 function getAnswer(select) {
     var answer = select;
         console.log(answer);
     $.ajax({
         type: "POST",
         url: "/quiz",
-        //traditional: true,
         data: {answer_give: answer},
-        //dataType: "json",
         success: function (response) {
-            alert(response["msg"] );
+            alert(response['msg'])
         }
     })
 }
+

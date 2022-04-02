@@ -56,3 +56,24 @@ if(totalPoint <= 20){
 let anserNm = document.querySelector('.anserNm')
 
 
+
+
+$(document).ready(function () {
+    showAnswer()
+});
+
+function showAnswer() {
+    $.ajax({
+        type: "GET",
+        url: "/quiz",
+        data: {},
+        success: function (response) {
+            let answers = response['all_answers']
+            // for (let i = 0; i < answers.length; i++){
+            //     let numbers_users = answers[i]
+            //     console.log(numbers_users)
+            // }
+                console.log(answers)
+        }
+    })
+}
