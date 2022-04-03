@@ -23,10 +23,10 @@ def resulthtml():
     return render_template('result.html')
 
 
-
 ##고정 변수
 number = 1
 sum = 0
+total_sum=0
 level = 0
 db_level = ""
 base = ""
@@ -47,7 +47,8 @@ db.level.insert_one(doc_Lbase)
 ## 사용자의 답안 서버에 저장
 @app.route("/quiz", methods=['POST'])
 def save_answer():
-    global sum,checklist
+
+    global total_sum,checklist,sum
 
     answer_receive = request.form.getlist('answer_give[]')
 
@@ -112,36 +113,44 @@ def save_answer():
     # 사용자 문제 풀고난 데이터 데베에 저장
     doc = {"number": number, "answer": answer_receive, "result": sum, "level": level}
     db.people.insert_one(doc)
+    total_sum=total_sum+sum
+    sum=0
 
 
-    return
+
+    return jsonify({'msg':'skd'})
+
 
 
 
 ## 서버에서 사용자의 답안 내리기
 @app.route('/quiz', methods=['GET'])
 def read_answer():
-    global number
+    global number,checklist,total_sum
 
-    #문제 푼사람 점수 = user_sum["result"]
+    # 문제 푼사람 점수 = user_sum["result"]
     user_sum = db.people.find_one({'number': number})
     print('점수')  ## 표시를 위한 print
     print(user_sum["result"])
 
+    ## 사용자의 레벨
+    user_level = user_sum["level"]
+    print('사용자 레벨')
+    print(user_level)
 
-    #평균 점수 = avr_sum
+    # 평균 점수 = avr_sum
 
     print('평균 점수')  ## 표시를 위한 print
-
-    avr_sum = int(sum / number)
+    print('총 점수 {}, 사용자수 {}'.format(total_sum,number))
+    avr_sum = int(total_sum / number)
     print(avr_sum)
 
-    #문제 푼사람이 선택한 정답 = user_choice["answer"]
+    # 문제 푼사람이 선택한 정답 = user_choice["answer"]
     user_choice = db.people.find_one({'number': number})
     print('사용자가 선택한 정답')  ## 표시를 위한 print
     print(user_choice["answer"])
 
-    #문제 푼사람이 틀린 문제만 1로 체크 = checklist
+    # 문제 푼사람이 틀린 문제만 1로 체크 = checklist
     print('사용자의 틀린 문제, 1로 표시')  ## 표시를 위한 print
     print(checklist)
 
@@ -158,10 +167,10 @@ def read_answer():
             mostlevel[1] = level[in_level]
             mostlevel[0] = in_level
 
-    resultlevel = mostlevel[1] / number * 100
+    resultlevel = int(mostlevel[1] / number * 100)
     ####
     #가장 많은 유형 퍼센트 = resultlevel
-    print("level{} 유형이 {}%만큼있습니다".format(mostlevel[0], int(resultlevel)))
+    print("level{} 유형이 {}%만큼있습니다".format(mostlevel[0], resultlevel))
 
     ### 가장 많이 틀린답 찾기 위한 함수
 
@@ -174,31 +183,21 @@ def read_answer():
         answer = [total_miss["q1"], total_miss["q2"], total_miss["q3"], total_miss["q4"]]
         for in_answer in range(len(answer)):
             if most_choose[0] < answer[in_answer]:
-                most_choose[0] = answer[in_answer]
+                most_choose[0]= answer[in_answer]
                 most_choose[1] = in_answer
 
         most_misspercent[in_number]= int( (most_choose[0] / number) * 100)
         most_miss[in_number] = most_choose[1]
     # 가장 많이 틀린 답 번호 = most_miss 가장 많이 틀린답 퍼센트 =most_misspercent
-    print('사용자가 틀린 답안 백분율')
     print(most_misspercent)
-    print('사용자가 가장 많이 틀린 답안')
     print(most_miss)
     ###
-
-
-    #가장 많이 틀린 답 번호 = most_miss
-
-
-
-
-
 
     ## 사용자의 점수
     point = user_sum['result'] * 10
 
     ## 사용자의 레벨
-
+    level = user_level
 
     ## 평균 점수
     average = avr_sum * 10
@@ -208,21 +207,26 @@ def read_answer():
 
     ## 사용자가 틀린 문제 ( 틀린 문제는 1로 표시)
     user_wrong = checklist
+    checklist = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-
-    ## 다른 사용자들이 틀린 답의 백분율
-
-
+    ## 가장 많은 유형과 백분율
+    most_level = mostlevel[0]
+    most_level_percentage = resultlevel
 
     number = number + 1
-    answers = list(db.mzQuiz.find({}, {'_id': False}))
 
+    ## 총 사용자수
+    all_user = number - 1
 
     return jsonify({
         'user_point': point,
+        'level': level,
         'average': average,
         'choice': user_answer,
         'wrong': user_wrong,
+        'most_level': most_level,
+        'most_level_percentage': most_level_percentage,
+        'all_user': all_user,
     })
 
 

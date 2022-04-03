@@ -141,14 +141,16 @@ function showAnswer() {
         url: "/quiz",
         data: {},
         success: function (response) {
-            let point = response['user_point']
-            let average = response['average']
-            let choice = response['choice']
-            let wrong = response['wrong']
+            let point = response['user_point']  // 사용자의 점수
+            let level = response['level']  // 사용자의 레벨
+            let average = response['average']  // 전체 사용자의 평균 점수
+            let choice = response['choice']  // 사용자의 선택 답안
+            let wrong = response['wrong']  // 사용자가 틀린 문제 (1로 표시)
+            let most_level = response['most_level']  // 사용자들의 가장 많은 레벨 유형
+            let most_level_percentage = response['most_level_percentage']  // 사용자들의 가장 많은 유형(%)
+            let all_user = response['all_user']  // 총 사용자수
 
-            console.log(point, average, choice, wrong)
-
-
+            console.log(point, level, average, choice, wrong, most_level, most_level_percentage, all_user)
         }
     })
 }
