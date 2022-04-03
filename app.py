@@ -180,7 +180,9 @@ def read_answer():
         most_misspercent[in_number]= int( (most_choose[0] / number) * 100)
         most_miss[in_number] = most_choose[1]
     # 가장 많이 틀린 답 번호 = most_miss 가장 많이 틀린답 퍼센트 =most_misspercent
+    print('사용자가 틀린 답안 백분율')
     print(most_misspercent)
+    print('사용자가 가장 많이 틀린 답안')
     print(most_miss)
     ###
 
