@@ -114,7 +114,7 @@ def save_answer():
     db.people.insert_one(doc)
 
 
-    return jsonify({'msg': '나의 결과는?!'})
+    return jsonify({'msg':'skd'})
 
 
 
@@ -124,19 +124,25 @@ def save_answer():
 def read_answer():
     global number
 
-    #문제 푼사람 점수 = user_sum["result"]
+    # 문제 푼사람 점수 = user_sum["result"]
     user_sum = db.people.find_one({'number': number})
+    print('점수')  ## 표시를 위한 print
     print(user_sum["result"])
 
-    #평균 점수 = avr_sum
-    avr_sum = sum / number
+    # 평균 점수 = avr_sum
+
+    print('평균 점수')  ## 표시를 위한 print
+
+    avr_sum = int(sum / number)
     print(avr_sum)
 
-    #문제 푼사람이 선택한 정답 = user_choice["answer"]
+    # 문제 푼사람이 선택한 정답 = user_choice["answer"]
     user_choice = db.people.find_one({'number': number})
+    print('사용자가 선택한 정답')  ## 표시를 위한 print
     print(user_choice["answer"])
 
-    #문제 푼사람이 틀린 문제만 1로 체크 = checklist
+    # 문제 푼사람이 틀린 문제만 1로 체크 = checklist
+    print('사용자의 틀린 문제, 1로 표시')  ## 표시를 위한 print
     print(checklist)
 
     user = db.level.find_one({'key': 1})
@@ -171,18 +177,41 @@ def read_answer():
                 most_choose[0]= answer[in_answer]
                 most_choose[1] = in_answer
 
-        most_misspercent[in_number]= (most_choose[0] / number) * 100
+        most_misspercent[in_number]= int( (most_choose[0] / number) * 100)
         most_miss[in_number] = most_choose[1]
     # 가장 많이 틀린 답 번호 = most_miss 가장 많이 틀린답 퍼센트 =most_misspercent
     print(most_misspercent)
     print(most_miss)
     ###
 
+    ## 사용자의 점수
+    point = user_sum['result'] * 10
+
+    ## 사용자의 레벨
 
 
-    answers = list(db.mzQuiz.find({}, {'_id': False}))
+    ## 평균 점수
+    average = avr_sum * 10
 
-    return jsonify({'all_answers': answers})
+    ## 사용자가 선택한 정답
+    user_answer = user_choice['answer']
+
+    ## 사용자가 틀린 문제 ( 틀린 문제는 1로 표시)
+    user_wrong = checklist
+
+
+    ## 다른 사용자들이 틀린 답의 백분율
+
+
+
+    number = number + 1
+
+    return jsonify({
+        'user_point': point,
+        'average': average,
+        'choice': user_answer,
+        'wrong': user_wrong,
+    })
 
 
 
