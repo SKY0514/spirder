@@ -114,8 +114,7 @@ def save_answer():
     db.people.insert_one(doc)
 
 
-    return jsonify({'msg': '나의 결과는?!'})
-
+    return
 
 
 
@@ -126,17 +125,22 @@ def read_answer():
 
     #문제 푼사람 점수 = user_sum["result"]
     user_sum = db.people.find_one({'number': number})
+    print('점수')  ## 표시를 위한 print
     print(user_sum["result"])
+
 
     #평균 점수 = avr_sum
     avr_sum = sum / number
+    print('평균 점수')  ## 표시를 위한 print
     print(avr_sum)
 
     #문제 푼사람이 선택한 정답 = user_choice["answer"]
     user_choice = db.people.find_one({'number': number})
+    print('사용자가 선택한 정답')  ## 표시를 위한 print
     print(user_choice["answer"])
 
     #문제 푼사람이 틀린 문제만 1로 체크 = checklist
+    print('사용자의 틀린 문제, 1로 표시')  ## 표시를 위한 print
     print(checklist)
 
     user = db.level.find_one({'key': 1})
@@ -167,7 +171,7 @@ def read_answer():
         answer = [total_miss["q1"], total_miss["q2"], total_miss["q3"], total_miss["q4"]]
         for in_answer in range(len(answer)):
             if most_choose[0] < answer[in_answer]:
-                most_choose[0]= answer[in_answer]
+                most_choose[0] = answer[in_answer]
                 most_choose[1] = in_answer
         most_miss[number]=most_choose[1]
     print(most_miss)
@@ -177,13 +181,36 @@ def read_answer():
 
 
 
-
-
-
-
     answers = list(db.mzQuiz.find({}, {'_id': False}))
 
-    return jsonify({'all_answers': answers})
+
+
+    ## 사용자의 점수
+    point = user_sum['result'] * 10
+
+    ## 사용자의 레벨
+
+
+    ## 평균 점수
+    average = avr_sum * 10
+
+    ## 사용자가 선택한 정답
+    user_answer = user_choice['answer']
+
+    ## 사용자가 틀린 문제 ( 틀린 문제는 1로 표시)
+    user_wrong = checklist
+
+
+    ## 다른 사용자들이 틀린 답의 백분율
+
+
+
+    return jsonify({
+        'user_point': point,
+        'average': average,
+        'choice': user_answer,
+        'wrong': user_wrong,
+    })
 
 
 

@@ -73,7 +73,6 @@ function getAnswer(select) {
         url: "/quiz",
         data: {answer_give: answer},
         success: function (response) {
-            alert(response['msg'])
         }
     })
 }

@@ -141,12 +141,14 @@ function showAnswer() {
         url: "/quiz",
         data: {},
         success: function (response) {
-            let answers = response['all_answers']
-            // for (let i = 0; i < answers.length; i++){
-            //     let numbers_users = answers[i]
-            //     console.log(numbers_users)
-            // }
-                console.log(answers)
+            let point = response['user_point']
+            let average = response['average']
+            let choice = response['choice']
+            let wrong = response['wrong']
+
+            console.log(point, average, choice, wrong)
+
+
         }
     })
 }
