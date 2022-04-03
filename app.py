@@ -130,8 +130,10 @@ def read_answer():
 
 
     #평균 점수 = avr_sum
-    avr_sum = sum / number
+
     print('평균 점수')  ## 표시를 위한 print
+
+    avr_sum = int(sum / number)
     print(avr_sum)
 
     #문제 푼사람이 선택한 정답 = user_choice["answer"]
@@ -164,24 +166,29 @@ def read_answer():
     ### 가장 많이 틀린답 찾기 위한 함수
 
     most_miss =[0,0,0,0,0,0,0,0,0,0]
-    for number in range(0,10):
+    most_misspercent=[0,0,0,0,0,0,0,0,0,0]
+    for in_number in range(0,10):
         # most_choose의 첫번째 인자는 가장 많이 틀린 번호의 횟수 두번째 인자는 가장 많이 틀린번호
         most_choose = [-1,-1]
-        total_miss = db.question.find_one({'number': number})
+        total_miss = db.question.find_one({'number': in_number})
         answer = [total_miss["q1"], total_miss["q2"], total_miss["q3"], total_miss["q4"]]
         for in_answer in range(len(answer)):
             if most_choose[0] < answer[in_answer]:
                 most_choose[0] = answer[in_answer]
                 most_choose[1] = in_answer
-        most_miss[number]=most_choose[1]
+
+        most_misspercent[in_number]= int( (most_choose[0] / number) * 100)
+        most_miss[in_number] = most_choose[1]
+    # 가장 많이 틀린 답 번호 = most_miss 가장 많이 틀린답 퍼센트 =most_misspercent
+    print(most_misspercent)
     print(most_miss)
     ###
+
 
     #가장 많이 틀린 답 번호 = most_miss
 
 
 
-    answers = list(db.mzQuiz.find({}, {'_id': False}))
 
 
 
@@ -203,6 +210,10 @@ def read_answer():
 
     ## 다른 사용자들이 틀린 답의 백분율
 
+
+
+    number = number + 1
+    answers = list(db.mzQuiz.find({}, {'_id': False}))
 
 
     return jsonify({
