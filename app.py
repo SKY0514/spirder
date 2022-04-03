@@ -129,7 +129,7 @@ def read_answer():
     print(user_sum["result"])
 
     #평균 점수 = avr_sum
-    avr_sum = sum / number
+    avr_sum = int(sum / number)
     print(avr_sum)
 
     #문제 푼사람이 선택한 정답 = user_choice["answer"]
@@ -171,15 +171,14 @@ def read_answer():
                 most_choose[0]= answer[in_answer]
                 most_choose[1] = in_answer
 
-        most_misspercent[in_number]= (most_choose[0] / number) * 100
+        most_misspercent[in_number]= int( (most_choose[0] / number) * 100)
         most_miss[in_number] = most_choose[1]
     # 가장 많이 틀린 답 번호 = most_miss 가장 많이 틀린답 퍼센트 =most_misspercent
     print(most_misspercent)
     print(most_miss)
     ###
 
-
-
+    number = number + 1
     answers = list(db.mzQuiz.find({}, {'_id': False}))
 
     return jsonify({'all_answers': answers})
