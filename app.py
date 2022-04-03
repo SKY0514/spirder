@@ -23,10 +23,10 @@ def resulthtml():
     return render_template('result.html')
 
 
-
 ##고정 변수
 number = 1
 sum = 0
+total_sum=0
 level = 0
 db_level = ""
 base = ""
@@ -47,7 +47,8 @@ db.level.insert_one(doc_Lbase)
 ## 사용자의 답안 서버에 저장
 @app.route("/quiz", methods=['POST'])
 def save_answer():
-    global sum,checklist
+
+    global total_sum,checklist,sum
 
     answer_receive = request.form.getlist('answer_give[]')
 
@@ -112,6 +113,9 @@ def save_answer():
     # 사용자 문제 풀고난 데이터 데베에 저장
     doc = {"number": number, "answer": answer_receive, "result": sum, "level": level}
     db.people.insert_one(doc)
+    total_sum=total_sum+sum
+    sum=0
+
 
 
     return jsonify({'msg':'skd'})
@@ -122,7 +126,7 @@ def save_answer():
 ## 서버에서 사용자의 답안 내리기
 @app.route('/quiz', methods=['GET'])
 def read_answer():
-    global number
+    global number,checklist,total_sum
 
     # 문제 푼사람 점수 = user_sum["result"]
     user_sum = db.people.find_one({'number': number})
@@ -132,8 +136,8 @@ def read_answer():
     # 평균 점수 = avr_sum
 
     print('평균 점수')  ## 표시를 위한 print
-
-    avr_sum = int(sum / number)
+    print('총 점수 {}, 사용자수 {}'.format(total_sum,number))
+    avr_sum = int(total_sum / number)
     print(avr_sum)
 
     # 문제 푼사람이 선택한 정답 = user_choice["answer"]
@@ -198,7 +202,7 @@ def read_answer():
 
     ## 사용자가 틀린 문제 ( 틀린 문제는 1로 표시)
     user_wrong = checklist
-
+    checklist = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
     ## 다른 사용자들이 틀린 답의 백분율
 
