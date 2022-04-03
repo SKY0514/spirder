@@ -44,7 +44,7 @@
   height: 80px;
   font-size: 40px;
   font-weight: bold;
-  color: rgb(165, 97, 97);
+  color: #ffffff;
 }
 
 /* 메인 */
@@ -82,26 +82,26 @@
 #main #sec2 #cate{
   background-color: rgb(90, 105, 213);
   width: 70%;
-  height: 500px;
+  height: 600px;
   margin: 0 auto;
   display: flex;
-  
+
 }
 #main #sec2 #cate .category1{
   background-color: #ffffff;
   width: 50%;
-  height: 100%;
+  height: 600px;
   border-radius: 20px;
   margin-right: 15px;
-  
-  
+
+
 }
 #main #sec2 #cate .category1 h2{
   margin: 15px auto 5px;
   font-size: 40px;
   color: rgb(78, 78, 78);
   font-weight: 100;
-  
+
 
 }
 #main #sec2 #cate .category1 h3{
@@ -121,18 +121,17 @@
   color: black;
   font-weight: 100;
   width: 80%;
-  
+
 }
 
 #main #sec2 #cate .category1 .cateimg{
 
-  background-position: center;
+ background-position: center;
   background-repeat: no-repeat;
   background-size: 400px 300px;
-  margin: 0 auto;
-
+  margin: 0 auto 5px;
   width: 300px;
-  height: 300px;
+  height: 350px;
   margin-top: -10px;
 
 
@@ -183,24 +182,13 @@
   font-weight: 100;
 }
 
-#main #sec2 #cate .category2 .cateimg{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 400px 300px;
-  margin: 0 auto;
-
-  width: 300px;
-  height: 300px;
-  margin-top: -10px;
-}
 #main #sec2 #cate .category2 .cateimg1{
   background-position: center;
   background-repeat: no-repeat;
   background-size: 400px 300px;
-  margin: 0 auto;
-
+  margin: 0 auto 5px;
   width: 300px;
-  height: 300px;
+  height: 350px;
   margin-top: -10px;
 }
 /* 섹션 3 */
