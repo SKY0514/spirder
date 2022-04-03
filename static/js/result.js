@@ -25,7 +25,7 @@ for(let i = 0; i <= 9; i++){
 // 나의 포인트
 let total = document.querySelector('.total');
 // 클라이언트 점수 함수 넣기
-let totalPoint = 80
+let totalPoint = 90
 total.append(totalPoint) // 함수 바꾸기
 
 // 나의 유형

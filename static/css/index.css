@@ -1,7 +1,7 @@
 /* * */
 * {
   min-width: 350px;
-
+  font-family: 'Jua', sans-serif;
   box-sizing:border-box;
   margin: 0;
   padding: 0;
@@ -41,17 +41,17 @@
 /* 헤더 */
 
 #header #logo {
-  margin: 0 auto;
+  min-width: 0px;
   display: inline-block;
-  font-size: 32px;
-  font-weight: 600;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  height: 75px;
   background-image: url(../images/free-icon-tarantula-4484333.png);
-  background-size: 100px 100px;
-  background-position: center;
+  background-size: 60% 80px;
   background-repeat: no-repeat;
+  background-position: center;
+  width: 10%;
+  height: 80px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
 
 
 }
