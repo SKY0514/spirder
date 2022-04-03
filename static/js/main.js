@@ -18,7 +18,9 @@ function addItem(itemText, qIdx, iIdx) {
     itemBtn.classList.add('py-4');
 
     //appendChild을 사용하여 <div> div3 태그 내부에 itemBtn을 추가
+
     item.appendChild(itemBtn);
+
     //0번쨰의 문제 항목을 버튼안에 넣는다.
     itemBtn.innerHTML = itemText;
 
@@ -30,11 +32,20 @@ function addItem(itemText, qIdx, iIdx) {
         status.style.width = (100/endItem) * (qIdx+1) + '%';
         for (let i = 0; i < itemBtnAll.length; i++) {
             itemBtnAll[i].disabled = true; //버튼 비 활성화
-            itemBtnAll[i].style.display = 'none'; //버튼 사라짐
+            itemBtnAll[i].style.WebkitAnimation = "fadeOut .8s"; //버튼 비 활성화
+            itemBtnAll[i].animation = "fadeOut .8s"; //버튼 비 활성화
+
+            //버튼 사라짐
         }
+        setTimeout(() => {
+          for (let i = 0; i < itemBtnAll.length; i++) {
+            itemBtnAll[i].style.display = 'none';
+          }
+          select[qIdx] = iIdx;
+          addQuestion(++qIdx)
+        }, 750)
         //버튼을 선택할 때 마다 그 버튼의 iIdx값을 넣는다.
-        select[qIdx] = iIdx;
-        addQuestion(++qIdx); //문제 출력 함수의 qIdx를 1증가해 다음 문제 불러옴
+       ; //문제 출력 함수의 qIdx를 1증가해 다음 문제 불러옴
     }, false);
 }
 
@@ -62,7 +73,6 @@ function begin() {
     let qIdx = 0;
     addQuestion(qIdx);
 }
-
 
 //사용자의 답안 서버로 저장하기 위해 보내기
 function getAnswer(select) {
