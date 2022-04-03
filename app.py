@@ -160,24 +160,23 @@ def read_answer():
     ### 가장 많이 틀린답 찾기 위한 함수
 
     most_miss =[0,0,0,0,0,0,0,0,0,0]
-    for number in range(0,10):
+    most_misspercent=[0,0,0,0,0,0,0,0,0,0]
+    for in_number in range(0,10):
         # most_choose의 첫번째 인자는 가장 많이 틀린 번호의 횟수 두번째 인자는 가장 많이 틀린번호
         most_choose = [-1,-1]
-        total_miss = db.question.find_one({'number': number})
+        total_miss = db.question.find_one({'number': in_number})
         answer = [total_miss["q1"], total_miss["q2"], total_miss["q3"], total_miss["q4"]]
         for in_answer in range(len(answer)):
             if most_choose[0] < answer[in_answer]:
                 most_choose[0]= answer[in_answer]
                 most_choose[1] = in_answer
-        most_miss[number]=most_choose[1]
+
+        most_misspercent[in_number]= (most_choose[0] / number) * 100
+        most_miss[in_number] = most_choose[1]
+    # 가장 많이 틀린 답 번호 = most_miss 가장 많이 틀린답 퍼센트 =most_misspercent
+    print(most_misspercent)
     print(most_miss)
     ###
-
-    #가장 많이 틀린 답 번호 = most_miss
-
-
-
-
 
 
 
