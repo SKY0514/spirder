@@ -314,6 +314,12 @@
 
 
 @media all and (max-width: 768px) {
+<<<<<<< HEAD
+=======
+  #logosp {
+    margin-left: -20px;
+  }
+>>>>>>> master
   #wrap {
     width: 100%;
     background-color: rgb(90, 105, 213);
@@ -340,6 +346,7 @@
 
   /* 헤더 */
   #header #logo {
+<<<<<<< HEAD
     display: inline-block;
     background-image: url(../images/free-icon-tarantula-4484333.png);
     background-size: 60% 80px;
@@ -349,6 +356,17 @@
     height: 80px;
     font-size: 40px;
     font-weight: bold;
+=======
+    text-align: center;
+    display: inline-block;
+    background-image: url(../images/free-icon-tarantula-4484333.png);
+    background-size: 80px 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+>>>>>>> master
     color: #ffffff;
   }
 
@@ -388,6 +406,10 @@
   /* 섹션 2 */
   #main #sec2 {
     background-color: rgb(90, 105, 213);
+<<<<<<< HEAD
+=======
+    height: 750px;
+>>>>>>> master
   }
 
   #main #sec2 #cate {
@@ -399,9 +421,19 @@
   }
 
   #main #sec2 #cate .category1 {
+<<<<<<< HEAD
     background-color: #ffffff;
     width: 100%;
     border-radius: 20px;
+=======
+  
+    background-color: #ffffff;
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+>>>>>>> master
   }
 
   #main #sec2 #cate .category1 h2 {
@@ -462,9 +494,16 @@
 
   #main #sec2 #cate .category2 {
     background-color: #ffffff;
+<<<<<<< HEAD
     width: 100%;
     border-radius: 20px;
     margin-left: 15px;
+=======
+    width: 300px;
+    border-radius: 20px;
+    height: 350px;
+    margin: 0;
+>>>>>>> master
   }
 
   #main #sec2 #cate .category2 h2 {
@@ -513,7 +552,11 @@
 
   #main #sec3 #wrong_answer {
     background-color: whitesmoke;
+<<<<<<< HEAD
     width: 70%;
+=======
+    width: 300px;
+>>>>>>> master
     height: 600px;
     margin: 0 auto;
     display: flex;
@@ -529,11 +572,20 @@
   }
 
   #main #sec3 #wrong_answer .wr {
+<<<<<<< HEAD
     background-color: #ffffff;
     width: 50%;
     height: 100%;
     border-radius: 20px;
     margin-right: 15px;
+=======
+    background-repeat: no-repeat;
+    background-size: 400px 300px;
+    width: 300px;
+    height: 350px;
+    margin: 0 auto;
+  
+>>>>>>> master
   }
 
   #main #sec3 #wrong_answer .wr .wrong_ul {
@@ -561,21 +613,37 @@
 
   #main #sec3 #wrong_answer .wrrate {
     background-color: #ffffff;
+<<<<<<< HEAD
     width: 50%;
     border-radius: 20px;
     margin-left: 15px;
+=======
+    width: 100%;
+    border-radius: 20px;
+    margin-left: 15px;
+    height: 350px;
+    margin: 0 auto;
+>>>>>>> master
   }
 
 
   /* 섹션 4 */
   #main #sec4 {
+<<<<<<< HEAD
     padding: 50px;
+=======
+    padding:200px 0 50px 0;
+>>>>>>> master
     background-color: whitesmoke;
 
   }
 
   #main #sec4 .btns {
+<<<<<<< HEAD
     width: 50%;
+=======
+    width: 80%;
+>>>>>>> master
     margin: 20px auto;
   }
 
@@ -585,7 +653,11 @@
     color: black;
     display: block;
     border-radius: 20px;
+<<<<<<< HEAD
     width: 355px;
+=======
+    width: 300px;
+>>>>>>> master
     font-size: 25px;
     height: 60px;
     background-color: rgb(52, 208, 149);
@@ -595,7 +667,11 @@
   #main #sec4 .btns .btn2 {
     margin-top: 20px;
     border-radius: 10px;
+<<<<<<< HEAD
     width: 50%;
+=======
+    width: 300px;
+>>>>>>> master
     height: 60px;
     display: flex;
     display: inline-block;
@@ -611,11 +687,17 @@
   /* 푸터 */
   #footer .fot1 {
     position: absolute;
+<<<<<<< HEAD
     width: 80%;
     margin: 0 100px;
 
     height: 100%;
     padding: 20px;
+=======
+    width: 100%;
+    margin: 0 10px;
+    height: 100%;
+>>>>>>> master
   }
 
   #footer .fot1 hr {
@@ -730,7 +812,11 @@
   #main #sec2 #cate .category1 {
     background-color: #ffffff;
     width: 50%;
+<<<<<<< HEAD
     height: 600px;
+=======
+    height: 300px;
+>>>>>>> master
     border-radius: 20px;
     margin-right: 15px;
 
@@ -800,7 +886,11 @@
   #main #sec2 #cate .category2 {
     background-color: #ffffff;
     width: 50%;
+<<<<<<< HEAD
     height: 100%;
+=======
+    height: 250px;
+>>>>>>> master
     border-radius: 20px;
     margin-left: 15px;
   }

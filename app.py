@@ -51,7 +51,7 @@ def change_char(a):
                 a[ten]=json1["mzQuestion"][ten]["item01"]
             elif a[ten]==1:
                 a[ten] = json1["mzQuestion"][ten]["item02"]
-            elif a[ten]==1:
+            elif a[ten]==2:
                 a[ten] = json1["mzQuestion"][ten]["item03"]
             else:
                 a[ten]=json1["mzQuestion"][ten]["item04"]
@@ -193,6 +193,7 @@ def read_answer():
     ### 가장 많이 틀린답 찾기 위한 함수
 
     most_miss =[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+    most_miss_num=[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
     most_misspercent=[0,0,0,0,0,0,0,0,0,0]
     for in_number in range(0,10):
         # most_choose의 첫번째 인자는 가장 많이 틀린 번호의 횟수 두번째 인자는 가장 많이 틀린번호
@@ -208,9 +209,16 @@ def read_answer():
         most_miss[in_number] = most_choose[1]
     # 가장 많이 틀린 답 번호 = most_miss 가장 많이 틀린답 퍼센트 =most_misspercent
     print(most_misspercent)
+    for a in range(0,9):
+        most_miss_num[a]=most_miss[a]
+    print(most_miss_num)
     change_char(most_miss)
+
     print("가장 많이 선택한 오답")
     print(most_miss)
+
+    print("가장 많이 선택한 오답 번호")
+    print(most_miss_num)
     ###
 
     ## 사용자의 점수
@@ -229,7 +237,7 @@ def read_answer():
     ## 사용자가 틀린 문제 ( 틀린 문제는 1로 표시)
     user_wrong = [0,0,0,0,0,0,0,0,0,0]
     for num in range(0,10):
-        user_wrong[num] =  user_answer[num]
+        user_wrong[num] = user_answer[num]
         if checklist[num]==-1:
             user_wrong[num]=-1
 
@@ -262,6 +270,7 @@ def read_answer():
         'most_level': most_level,
         'most_level_percentage': most_level_percentage,
         'most_wrong' : most_miss,
+        'most_wrong_num': most_miss_num,
         'most_wrong_percentage' : most_misspercent,
         'all_user': all_user,
     })

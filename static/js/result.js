@@ -52,13 +52,15 @@ function showAnswer() {
             let wrong = response['wrong']  // 사용자가 틀린 문제 (1로 표시)
             let most_level = response['most_level']  // 사용자들의 가장 많은 레벨 유형
             let most_level_percentage = response['most_level_percentage']  // 사용자들의 가장 많은 유형(%)
-            let most_wrong =response['most_wrong']//가장 많이 틀린 답
-            let most_wrong_percentage =response['most_wrong_percentage'] //가장 많이 틀린 답의 비율
+            let most_wrong = response['most_wrong']//가장 많이 틀린 답
+            let most_wrong_num = response['most_wrong_num']//가장 많이 틀린 답
+            let most_wrong_percentage = response['most_wrong_percentage'] //가장 많이 틀린 답의 비율
             let all_user = response['all_user']  // 총 사용자수
 
-            console.log(point, level, average, choice, wrong, most_level, most_level_percentage,most_wrong,most_wrong_percentage, all_user)
+            console.log(point, level, average, choice, wrong, most_level, most_level_percentage,most_wrong,most_wrong_num,most_wrong_percentage, all_user)
             console.log(point)
             console.log(choice)
+            console.log(most_wrong_percentage)
             let total = document.querySelector('.total');
             // 클라이언트 점수 함수 넣기
 
@@ -69,28 +71,28 @@ function showAnswer() {
             let desc = document.querySelector('.desc')
             let cateimg = document.querySelector('.cateimg')
 
-            if(point <= 20){ // 클라이언트 점수
+            if (point <= 20) { // 클라이언트 점수
                 levels.append(mzLevel[0]["level"])
                 title.append(mzLevel[0]["title"])
                 desc.append(mzLevel[0]["desc"])
                 cateimg.style.backgroundImage = "url('../static/images/egg.png')";
                 cateimg.style.backgroundSize = "300px 300px";
                 cateimg.style.backgroundPosition = "center center";
-            }else if(point <= 40){
+            } else if (point <= 40) {
                 levels.append(mzLevel[1]["level"])
                 title.append(mzLevel[1]["title"])
                 desc.append(mzLevel[1]["desc"])
                 cateimg.style.backgroundImage = "url('../static/images/baby.png')";
                 cateimg.style.backgroundSize = "300px 300px";
                 cateimg.style.backgroundPosition = "center center";
-            }else if(point <= 60){
+            } else if (point <= 60) {
                 levels.append(mzLevel[2]["level"])
                 title.append(mzLevel[2]["title"])
                 desc.append(mzLevel[2]["desc"])
                 cateimg.style.backgroundImage = "url('../static/images/삐삐.png')";
                 cateimg.style.backgroundSize = "300px 300px";
                 cateimg.style.backgroundPosition = "center center";
-            }else if(point <= 80){
+            } else if (point <= 80) {
                 levels.append(mzLevel[3]["level"])
                 title.append(mzLevel[3]["title"])
                 desc.append(mzLevel[3]["desc"])
@@ -98,7 +100,7 @@ function showAnswer() {
                 cateimg.style.backgroundSize = "350px 500px";
                 cateimg.style.backgroundPosition = "center center";
 
-            }else if(point <= 100){
+            } else if (point <= 100) {
                 levels.append(mzLevel[4]["level"])
                 title.append(mzLevel[4]["title"])
                 desc.append(mzLevel[4]["desc"])
@@ -115,28 +117,28 @@ function showAnswer() {
             let desc1 = document.querySelector('.desc1')
             let cateimg1 = document.querySelector('.cateimg1')
 
-            if(average <= 20){ // 클라이언트 점수
+            if (average <= 20) { // 클라이언트 점수
                 level1.append(mzLevel[0]["level"])
                 title1.append(mzLevel[0]["title"])
                 desc1.append(mzLevel[0]["desc"])
                 cateimg1.style.backgroundImage = "url('../static/images/egg.png')";
                 cateimg1.style.backgroundSize = "300px 300px";
                 cateimg1.style.backgroundPosition = "center center";
-            }else if(average <= 40){
+            } else if (average <= 40) {
                 level1.append(mzLevel[1]["level"])
                 title1.append(mzLevel[1]["title"])
                 desc1.append(mzLevel[1]["desc"])
                 cateimg1.style.backgroundImage = "url('../static/images/baby.png')";
                 cateimg1.style.backgroundSize = "300px 300px";
                 cateimg.style.backgroundPosition = "center center";
-            }else if(average <= 60){
+            } else if (average <= 60) {
                 level1.append(mzLevel[2]["level"])
                 title1.append(mzLevel[2]["title"])
                 desc1.append(mzLevel[2]["desc"])
                 cateimg1.style.backgroundImage = "url('../static/images/삐삐.png')";
                 cateimg1.style.backgroundSize = "300px 300px";
                 cateimg1.style.backgroundPosition = "center center";
-            }else if(average <= 80){
+            } else if (average <= 80) {
                 level1.append(mzLevel[3]["level"])
                 title1.append(mzLevel[3]["title"])
                 desc1.append(mzLevel[3]["desc"])
@@ -144,7 +146,7 @@ function showAnswer() {
                 cateimg1.style.backgroundSize = "350px 500px";
                 cateimg1.style.backgroundPosition = "center center";
 
-            }else if(average <= 100){
+            } else if (average <= 100) {
                 level1.append(mzLevel[4]["level"])
                 title1.append(mzLevel[4]["title"])
                 desc1.append(mzLevel[4]["desc"])
@@ -154,31 +156,76 @@ function showAnswer() {
 
             }
 
-             // 답안체크
+            // 답안체크
 
-            for (let i = 0 ; i < 10; i++){
+            for (let i = 0; i < 10; i++) {
                 let temp = `<li class="wrong_li">
                                 <h4>${mzQuestion[i]['question']}</h4>
-                                <p>정답<span class="anserNm1">${choice[i]+1}</span>번 ${mzQuestion[i]['item01']}</p>
+                                <p class="p"><span class="anserNm1">${choice[i] + 1}</span>번 '${mzQuestion[i]['item'][choice[i]]["list"]}'&nbsp<span class="span">&nbsp </span></p>
                             </li>`
                 $('.wrong_ul').append(temp)
             }
 
-            for(let i = 0; i <= 9; i++){
-                if (document.querySelectorAll('.anserNm1')[i].textContent == mzQuestion[i]['answer']+1){
+            for (let i = 0; i <= 9; i++) {
+                if (document.querySelectorAll('.anserNm1')[i].textContent == mzQuestion[i]['answer'] + 1) {
                     $(".wrong_li")[i].style.backgroundColor = 'white'
+                    document.querySelectorAll('.span')[i].textContent ='정답입니다.'
+
                 } else {
-                    $(".wrong_li")[i].style.backgroundColor = '#ffa'
-                };
+                    $(".wrong_li")[i].style.backgroundColor = 'rgb(255, 151, 151)'
+                    document.querySelectorAll('.span')[i].textContent = '오답입니다.'
+                }
+                ;
             }
 
+            // 많이 틀린문제들
+
+            for (let i = 0; i < 10; i++) {
+                let temp = `<li class="wrong_li1">
+                                <h4>${mzQuestion[i]['question']}</h4>
+                                <p>오답 <span class="anserNm2">${most_wrong_num[i]}</span>번 ${most_wrong[i]} ${most_wrong_percentage[i]}%</p>
+                            </li>`
+
+                // function a(){
+                //     for(let i = 0; i <10; i++){
+                //         if(most_wrong[i] === mzQuestion[i]["item"][0]["list"]){
+                //             return 1;
+                //         }else if (most_wrong[i] == mzQuestion[i]["item"][1]["list"]){
+                //             return 2;
+                //         }else if (most_wrong[i] == mzQuestion[i]["item"][2]["list"]){
+                //             return 3;
+                //         }else if (most_wrong[i] == mzQuestion[i]["item"][3]["list"]) {
+                //             return 4;
+                //         }
+                //     }
+                // }
 
 
+                $('.wrrate_ul').append(temp)
+
+
+
+
+                // for (let i = 0 ; i <10; i++){
+                //     function cho(){
+                //         if(most_wrong[1] == mzQuestion[1]['item'][0]){
+                //             return 1;
+                //             else if(most_wrong[1] == mzQuestion[1]['item'][1]){
+                //                 return 2;
+                //             } else if(most_wrong[1] == mzQuestion[1]['item'][2]){
+                //                 return 3;
+                //             } else if(most_wrong[1] == mzQuestion[1]['item'][3]){
+                //                 return 4;
+                //             }
+                //         }
+                // }
+
+            }
 
         }
-
     })
 }
+
 
 // 내가 틀립답 답지도 함께
 // 오답률과 오답 번화와 오답선택지

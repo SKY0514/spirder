@@ -1,0 +1,149 @@
+<<<<<<< HEAD
+=======
+/* 베이직 */
+* {
+  font-family: 'Jua', sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* 레이아웃 */
+#wrap{ 
+  width: 100%;
+  background-color:rgb(90, 105, 213);
+  height: 2000px;
+}
+#header {
+  width: 100%;
+  background-color: rgb(52, 208, 149);
+}
+#main {
+  width: 100%;
+  background-color: rgb(90, 105, 213);
+}
+#footer {
+  width: 100%;
+  background-color: rgb(39, 39, 39);
+  position: relative;
+  height: 260px;
+}
+.starting{
+  background:url(../images/무지개.gif);
+  margin-top: 105px;
+  width: 300px;
+  font-size: 50px;
+  text-align: center;
+  border: 1px solid beige;
+}
+.starting:hover{
+  cursor: pointer;
+}
+#div1{
+  width: 100%;
+  height: 70px;
+  background-color: rgb(52, 208, 149);
+  padding-top: 15px;
+}
+
+#div1 h1{
+  font-weight: 100;
+}
+
+#div2{
+  width: 100%;
+  height: 450px;
+}
+
+#div2 .background_image {
+  width: 100%;
+  height: 275px;
+  background: url(../images/div3_img1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1000px 300px;
+
+}
+
+#div2 .background_image #problem_text {
+  font-size: 50px;
+  font-weight: 100;
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 70px;
+  
+}
+
+#div3 {
+  border-radius: 10px;
+  margin: -170px auto 30px;
+  padding: 30px;
+  width: 1200px;
+  height: 400px;
+  background: whitesmoke;
+  position: relative;
+  
+  
+  
+}
+
+.iList {
+  font-weight: 100;
+  width: 500px;
+  height: 100px;
+  display: inline-block;
+  margin: 30px 10px 30px 10px!important;
+  font-size: 26px;
+  border: none;
+  letter-spacing: 5px;
+  
+}
+.status {
+  width: 100%;
+  position: absolute;
+  height: 10px;
+  top: 0px;
+  left: 0px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  
+}
+.statusBar {
+  width: 0;
+  border-radius: 20px;
+  height: 100%;
+  background-color: cadetblue;
+}
+button:hover{
+  cursor: pointer;
+  background-color: #888888;
+  color: whitesmoke;
+}
+.btn:focus {
+  outline: none;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: gold;
+  top: 100%;
+  left: 0;
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: translateY(-100%);
+}
+
+.btn:hover {
+  color: #3c3e70;
+}
+
+
+>>>>>>> d1b15328dbdad756e90ca7726539c22c080f4011
