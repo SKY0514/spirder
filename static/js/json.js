@@ -63,7 +63,7 @@ const mzLevel = [
     },
     {
       "index": 5,
-      "question": "5. '제곧네'와 같은 의미를 가진 것은?",
+      "question": "5. '제곧내'와 같은 의미를 가진 것은?",
       "item": [{"list" : "냉무"},{"list" : "니곧내"},{"list" : "완내스"},{"list" : "쟤같네"}],
       "answer": 0
     },
