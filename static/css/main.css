@@ -30,7 +30,7 @@
 }
 .starting{
   background:url(../images/무지개.gif);
-  margin-top: 35px;
+  margin-top: 105px;
   width: 300px;
   font-size: 50px;
   text-align: center;
@@ -41,9 +41,9 @@
 }
 #div1{
   width: 100%;
-  height: 100px;
+  height: 70px;
   background-color: rgb(52, 208, 149);
-  padding-top: 25px;
+  padding-top: 15px;
 }
 
 #div1 h1{
@@ -52,17 +52,16 @@
 
 #div2{
   width: 100%;
-  height: 600px;
+  height: 450px;
 }
 
 #div2 .background_image {
   width: 100%;
-  height: 400px;
+  height: 275px;
   background: url(../images/div3_img1.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1000px 300px;
-  padding-top: 150px;
 
 }
 
@@ -71,15 +70,16 @@
   font-weight: 100;
   width: 700px;
   margin: 0 auto;
+  padding-top: 70px;
   
 }
 
 #div3 {
   border-radius: 10px;
-  margin: -100px auto 30px;
+  margin: -170px auto 30px;
   padding: 30px;
-  width: 1000px;
-  height: 600px;
+  width: 1200px;
+  height: 400px;
   background: whitesmoke;
   position: relative;
   
@@ -91,8 +91,8 @@
   font-weight: 100;
   width: 500px;
   height: 100px;
-  display: block;
-  margin: 30px auto!important;
+  display: inline-block;
+  margin: 30px 10px 30px 10px!important;
   font-size: 26px;
   border: none;
   letter-spacing: 5px;
@@ -142,3 +142,5 @@ button:hover{
 .btn:hover {
   color: #3c3e70;
 }
+
+
