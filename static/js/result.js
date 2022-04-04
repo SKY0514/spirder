@@ -52,10 +52,13 @@ function showAnswer() {
             let wrong = response['wrong']  // 사용자가 틀린 문제 (1로 표시)
             let most_level = response['most_level']  // 사용자들의 가장 많은 레벨 유형
             let most_level_percentage = response['most_level_percentage']  // 사용자들의 가장 많은 유형(%)
+            let most_wrong =response['most_wrong']//가장 많이 틀린 답
+            let most_wrong_percentage =response['most_wrong_percentage'] //가장 많이 틀린 답의 비율
             let all_user = response['all_user']  // 총 사용자수
 
-            console.log(point, level, average, choice, wrong, most_level, most_level_percentage, all_user)
+            console.log(point, level, average, choice, wrong, most_level, most_level_percentage,most_wrong,most_wrong_percentage, all_user)
             console.log(point)
+            console.log(choice)
             let total = document.querySelector('.total');
             // 클라이언트 점수 함수 넣기
 
