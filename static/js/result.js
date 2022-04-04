@@ -161,7 +161,7 @@ function showAnswer() {
             for (let i = 0; i < 10; i++) {
                 let temp = `<li class="wrong_li">
                                 <h4>${mzQuestion[i]['question']}</h4>
-                                <p>정답<span class="anserNm1">${choice[i] + 1}</span>번 ${mzQuestion[i]['item'][choice[i]]["list"]}</p>
+                                <p class="p"><span class="anserNm1">${choice[i] + 1}</span>번 '${mzQuestion[i]['item'][choice[i]]["list"]}'&nbsp<span class="span">&nbsp </span></p>
                             </li>`
                 $('.wrong_ul').append(temp)
             }
@@ -169,8 +169,11 @@ function showAnswer() {
             for (let i = 0; i <= 9; i++) {
                 if (document.querySelectorAll('.anserNm1')[i].textContent == mzQuestion[i]['answer'] + 1) {
                     $(".wrong_li")[i].style.backgroundColor = 'white'
+                    document.querySelectorAll('.span')[i].textContent ='정답입니다.'
+
                 } else {
-                    $(".wrong_li")[i].style.backgroundColor = '#ffa'
+                    $(".wrong_li")[i].style.backgroundColor = 'rgb(255, 151, 151)'
+                    document.querySelectorAll('.span')[i].textContent = '오답입니다.'
                 }
                 ;
             }
