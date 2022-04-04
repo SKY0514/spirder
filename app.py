@@ -30,7 +30,7 @@ total_sum=0
 level = 0
 db_level = ""
 base = ""
-checklist = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+checklist = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 
 # 문제 중 몇번이 얼마나 틀렸는지 체크 & 한 번만 실행 해야함-PJ#1
 for base in range(0, 10):
@@ -41,6 +41,21 @@ for base in range(0, 10):
 doc_Lbase = {"key": 1, "number": number, "lv1": 0, "lv2": 0, "lv3": 0, "lv4": 0, "lv5": 0, }
 db.level.insert_one(doc_Lbase)
 
+
+def change_char(a):
+    for ten in range(0,10):
+        if a[ten]== -1:
+            a[ten]= 0
+        else:
+            if a[ten]==0:
+                a[ten]=json1["mzQuestion"][ten]["item01"]
+            elif a[ten]==1:
+                a[ten] = json1["mzQuestion"][ten]["item02"]
+            elif a[ten]==1:
+                a[ten] = json1["mzQuestion"][ten]["item03"]
+            else:
+                a[ten]=json1["mzQuestion"][ten]["item04"]
+    return a
 
 
 
@@ -154,6 +169,9 @@ def read_answer():
     print('사용자의 틀린 문제, 1로 표시')  ## 표시를 위한 print
     print(checklist)
 
+
+
+
     user = db.level.find_one({'key': 1})
     level = [user['lv1'], user['lv2'], user['lv3'], user['lv4'], user['lv5']]
 
@@ -174,11 +192,11 @@ def read_answer():
 
     ### 가장 많이 틀린답 찾기 위한 함수
 
-    most_miss =[0,0,0,0,0,0,0,0,0,0]
+    most_miss =[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
     most_misspercent=[0,0,0,0,0,0,0,0,0,0]
     for in_number in range(0,10):
         # most_choose의 첫번째 인자는 가장 많이 틀린 번호의 횟수 두번째 인자는 가장 많이 틀린번호
-        most_choose = [-1,-1]
+        most_choose = [0,-1]
         total_miss = db.question.find_one({'number': in_number})
         answer = [total_miss["q1"], total_miss["q2"], total_miss["q3"], total_miss["q4"]]
         for in_answer in range(len(answer)):
@@ -190,6 +208,8 @@ def read_answer():
         most_miss[in_number] = most_choose[1]
     # 가장 많이 틀린 답 번호 = most_miss 가장 많이 틀린답 퍼센트 =most_misspercent
     print(most_misspercent)
+    change_char(most_miss)
+    print("가장 많이 선택한 오답")
     print(most_miss)
     ###
 
@@ -205,9 +225,22 @@ def read_answer():
     ## 사용자가 선택한 정답
     user_answer = user_choice['answer']
 
+
     ## 사용자가 틀린 문제 ( 틀린 문제는 1로 표시)
-    user_wrong = checklist
-    checklist = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    user_wrong = [0,0,0,0,0,0,0,0,0,0]
+    for num in range(0,10):
+        user_wrong[num] =  user_answer[num]
+        if checklist[num]==-1:
+            user_wrong[num]=-1
+
+    change_char(user_wrong)
+
+    ##사용자가 어떤 문제(문장)을 선택해서 틀렸는지
+    print("현재 사용자가 선택한 오답")
+    print(user_wrong)
+    checklist = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+
+
 
     ## 가장 많은 유형과 백분율
     most_level = mostlevel[0]
@@ -218,6 +251,8 @@ def read_answer():
     ## 총 사용자수
     all_user = number - 1
 
+
+
     return jsonify({
         'user_point': point,
         'level': level,
@@ -226,6 +261,8 @@ def read_answer():
         'wrong': user_wrong,
         'most_level': most_level,
         'most_level_percentage': most_level_percentage,
+        'most_wrong' : most_miss,
+        'most_wrong_percentage' : most_misspercent,
         'all_user': all_user,
     })
 
