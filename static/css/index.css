@@ -47,7 +47,7 @@
   background-size: 60% 80px;
   background-repeat: no-repeat;
   background-position: center;
-  width: 10%;
+  width: 144px;
   height: 80px;
   font-size: 40px;
   font-weight: bold;
@@ -123,4 +123,29 @@
   text-align: initial;
   font-family: sans-serif;
   color: #888888;
+}
+
+
+
+@media(max-width: 768px){
+  #footer .fot1 {
+    position: absolute;
+    width: 80%;
+    margin: 0 ;
+    height: 100%;
+    padding: 20px;
+  }
+
+  #header #logo {
+    display: inline-block;
+    background-image: url(../images/free-icon-tarantula-4484333.png);
+    background-size: 60% 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 144px;
+    height: 80px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+}
 }

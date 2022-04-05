@@ -76,28 +76,24 @@ function showAnswer() {
                 title.append(mzLevel[0]["title"])
                 desc.append(mzLevel[0]["desc"])
                 cateimg.style.backgroundImage = "url('../static/images/egg.png')";
-                cateimg.style.backgroundSize = "300px 300px";
                 cateimg.style.backgroundPosition = "center center";
             } else if (point <= 40) {
                 levels.append(mzLevel[1]["level"])
                 title.append(mzLevel[1]["title"])
                 desc.append(mzLevel[1]["desc"])
                 cateimg.style.backgroundImage = "url('../static/images/baby.png')";
-                cateimg.style.backgroundSize = "300px 300px";
                 cateimg.style.backgroundPosition = "center center";
             } else if (point <= 60) {
                 levels.append(mzLevel[2]["level"])
                 title.append(mzLevel[2]["title"])
                 desc.append(mzLevel[2]["desc"])
                 cateimg.style.backgroundImage = "url('../static/images/삐삐.png')";
-                cateimg.style.backgroundSize = "300px 300px";
                 cateimg.style.backgroundPosition = "center center";
             } else if (point <= 80) {
                 levels.append(mzLevel[3]["level"])
                 title.append(mzLevel[3]["title"])
                 desc.append(mzLevel[3]["desc"])
                 cateimg.style.backgroundImage = "url('../static/images/싸이월드.png')";
-                cateimg.style.backgroundSize = "350px 500px";
                 cateimg.style.backgroundPosition = "center center";
 
             } else if (point <= 100) {
@@ -105,7 +101,6 @@ function showAnswer() {
                 title.append(mzLevel[4]["title"])
                 desc.append(mzLevel[4]["desc"])
                 cateimg.style.backgroundImage = "url('../static/images/mz세대 이미지.jpg')";
-                cateimg.style.backgroundSize = "200px 300px";
                 cateimg.style.backgroundPosition = "center center";
 
             }
@@ -122,28 +117,28 @@ function showAnswer() {
                 title1.append(mzLevel[0]["title"])
                 desc1.append(mzLevel[0]["desc"])
                 cateimg1.style.backgroundImage = "url('../static/images/egg.png')";
-                cateimg1.style.backgroundSize = "300px 300px";
+
                 cateimg1.style.backgroundPosition = "center center";
             } else if (average <= 40) {
                 level1.append(mzLevel[1]["level"])
                 title1.append(mzLevel[1]["title"])
                 desc1.append(mzLevel[1]["desc"])
                 cateimg1.style.backgroundImage = "url('../static/images/baby.png')";
-                cateimg1.style.backgroundSize = "300px 300px";
+
                 cateimg.style.backgroundPosition = "center center";
             } else if (average <= 60) {
                 level1.append(mzLevel[2]["level"])
                 title1.append(mzLevel[2]["title"])
                 desc1.append(mzLevel[2]["desc"])
                 cateimg1.style.backgroundImage = "url('../static/images/삐삐.png')";
-                cateimg1.style.backgroundSize = "300px 300px";
+
                 cateimg1.style.backgroundPosition = "center center";
             } else if (average <= 80) {
                 level1.append(mzLevel[3]["level"])
                 title1.append(mzLevel[3]["title"])
                 desc1.append(mzLevel[3]["desc"])
                 cateimg1.style.backgroundImage = "url('../static/images/싸이월드.png')";
-                cateimg1.style.backgroundSize = "350px 500px";
+
                 cateimg1.style.backgroundPosition = "center center";
 
             } else if (average <= 100) {
@@ -151,7 +146,7 @@ function showAnswer() {
                 title1.append(mzLevel[4]["title"])
                 desc1.append(mzLevel[4]["desc"])
                 cateimg1.style.backgroundImage = "url('../static/images/mz세대 이미지.jpg')";
-                cateimg1.style.backgroundSize = "200px 300px";
+
                 cateimg1.style.backgroundPosition = "center center";
 
             }

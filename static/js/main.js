@@ -14,7 +14,6 @@ function addItem(itemText, qIdx, iIdx) {
     //만든 버튼들에는 class나 id가 없기 때문에 모든 버튼을 선택하기 위해 iList란 class값을 넣어준다.
     itemBtn.classList.add('iList');
     //버튼 크기 및 간격 조정
-    itemBtn.classList.add('my-1');
     itemBtn.classList.add('py-4');
 
     //appendChild을 사용하여 <div> div3 태그 내부에 itemBtn을 추가
