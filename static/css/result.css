@@ -282,6 +282,10 @@
   font-size: 30px;
   height: 100%;
 }
+#main #sec4 .btns .btn2 .share:hover{
+  background: #888888;
+  cursor: pointer;
+}
 
 /* 푸터 */
 #footer .fot1{

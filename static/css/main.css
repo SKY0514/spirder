@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /* 베이직 */
 * {
   font-family: 'Jua', sans-serif;
@@ -9,12 +7,12 @@
   padding: 0;
   text-decoration: none;
 }
-
 /* 레이아웃 */
-#wrap{ 
+#wrap{
   width: 100%;
   background-color:rgb(90, 105, 213);
   height: 2000px;
+  height: 800px;
 }
 #header {
   width: 100%;
@@ -47,16 +45,13 @@
   background-color: rgb(52, 208, 149);
   padding-top: 15px;
 }
-
 #div1 h1{
   font-weight: 100;
 }
-
 #div2{
   width: 100%;
   height: 450px;
 }
-
 #div2 .background_image {
   width: 100%;
   height: 275px;
@@ -64,18 +59,15 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1000px 300px;
-
 }
-
 #div2 .background_image #problem_text {
   font-size: 50px;
   font-weight: 100;
   width: 700px;
   margin: 0 auto;
   padding-top: 70px;
-  
-}
 
+}
 #div3 {
   border-radius: 10px;
   margin: -170px auto 30px;
@@ -84,21 +76,20 @@
   height: 400px;
   background: whitesmoke;
   position: relative;
-  
-  
-  
-}
 
+
+
+}
 .iList {
   font-weight: 100;
   width: 500px;
   height: 100px;
   display: inline-block;
-  margin: 30px 10px 30px 10px!important;
+  margin: 30px 10px 30px 10px;
   font-size: 26px;
   border: none;
   letter-spacing: 5px;
-  
+
 }
 .status {
   width: 100%;
@@ -108,7 +99,7 @@
   left: 0px;
   border-radius: 20px;
   background-color: whitesmoke;
-  
+
 }
 .statusBar {
   width: 0;
@@ -124,7 +115,6 @@ button:hover{
 .btn:focus {
   outline: none;
 }
-
 .btn::before {
   content: "";
   position: absolute;
@@ -136,14 +126,103 @@ button:hover{
   transition: all 0.4s;
   z-index: -1;
 }
-
 .btn:hover::before {
   transform: translateY(-100%);
 }
-
 .btn:hover {
   color: #3c3e70;
 }
 
+@media(max-width: 768px){
+#div2 .background_image {
+  width: 100%;
 
->>>>>>> d1b15328dbdad756e90ca7726539c22c080f4011
+  background: url(../images/div3_img1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 500px 250px;
+}
+  .starting{
+  background:url(../images/무지개.gif);
+  margin-top: 105px;
+  width: 150px;
+  font-size: 50px;
+  text-align: center;
+  border: 1px solid beige;
+}
+
+#div2 .background_image #problem_text {
+  font-size: 25px;
+  font-weight: 100;
+  width: 500px;
+  padding: 120px 85px 0px 60px;
+
+}
+
+#div3 {
+  border-radius: 10px;
+  margin: -170px auto 30px;
+  padding: 30px;
+  width: 500px;
+  height: 300px;
+  background: whitesmoke;
+  position: relative;
+}
+
+.iList  {
+  font-weight: 50;
+  width: 200px;
+  height: 70px;
+  display: inline-block;
+  margin: 30px 10px 30px 10px;
+  font-size: 15px;
+  border: none;
+  letter-spacing: 5px;
+}
+@media(max-width: 375px){
+body {
+    width: 375px;
+}
+  #wrap{
+  width: 375px;
+  background-color:rgb(90, 105, 213);
+  height: 900px;
+}
+  #div2 .background_image {
+  width: 100%;
+
+  background: url(../images/div3_img1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 350px 235px;
+}
+  #div2 .background_image #problem_text {
+  font-size: 20px;
+  font-weight: 100;
+  width: 350px;
+  padding: 130px 85px 0px 60px;
+}
+  #div3 {
+  border-radius: 10px;
+  margin: -170px auto 30px;
+  padding: 30px;
+  width: 250px;
+  height: 400px;
+  background: whitesmoke;
+  position: relative;
+}
+  .iList  {
+  font-weight: 50;
+  width: 200px;
+  height: 70px;
+  display: inline-block;
+  margin: auto;
+  font-size: 15px;
+  border: none;
+  letter-spacing: 5px;
+
+
+}
+}
+
+}

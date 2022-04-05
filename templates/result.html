@@ -57,8 +57,8 @@
       <section id="sec4">
        <div class="btns">
           <a href="http://127.0.0.1:5000/">다시하기</a>
-          <form action='login_page.php' class="btn2">
-            <input class="share" type='button' value='SNS 공유하기' onclick='js:kakoShare()'/>
+          <form class="btn2">
+            <input class="share" type='button' value='SNS 공유하기' onclick="javascript:sendLink()" />
           </form>
        </div>
       </section>
@@ -79,10 +79,6 @@
   <script src="../static/js/json.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-  <script>
-      Kakao.init('27184a3fcd905a4935b964caebd1e8d7');
-      Kakao.isInitialized();
-  </script>
   <script src="../static/js/kako_sr.js"></script>
 </body>
 </html>
