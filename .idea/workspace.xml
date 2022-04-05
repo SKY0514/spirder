@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1931cac4-1b42-43a3-98fd-5a6cb57b9659" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/result.css" afterDir="false" />
-    </list>
+    <list default="true" id="1931cac4-1b42-43a3-98fd-5a6cb57b9659" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,6 +80,7 @@
       <workItem from="1649062783026" duration="16000" />
       <workItem from="1649062865359" duration="9038000" />
       <workItem from="1649077313752" duration="2224000" />
+      <workItem from="1649085650595" duration="276000" />
     </task>
     <servers />
   </component>
@@ -94,13 +92,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/static/js/result.js</url>
-          <line>100</line>
+          <line>102</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/spider$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1649075233325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/spider$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1649085776008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
