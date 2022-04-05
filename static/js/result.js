@@ -178,7 +178,7 @@ function showAnswer() {
             for (let i = 0; i < 10; i++) {
                 let temp = `<li class="wrong_li1">
                                 <h4>${mzQuestion[i]['question']}</h4>
-                                <p>오답 <span class="anserNm2">${most_wrong_num[i]}</span>번 ${most_wrong[i]} ${most_wrong_percentage[i]}%</p>
+                                <p>오답 <span class="anserNm2">${most_wrong_num[i]+1}</span>번 ${most_wrong[i]} ${most_wrong_percentage[i]}%</p>
                             </li>`
 
                 // function a(){
