@@ -209,7 +209,7 @@ def read_answer():
         most_miss[in_number] = most_choose[1]
     # 가장 많이 틀린 답 번호 = most_miss 가장 많이 틀린답 퍼센트 =most_misspercent
     print(most_misspercent)
-    for a in range(0,9):
+    for a in range(0,10):
         most_miss_num[a]=most_miss[a]
     print(most_miss_num)
     change_char(most_miss)
