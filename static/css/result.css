@@ -282,6 +282,7 @@
   width: 100%;
   font-size: 30px;
   height: 100%;
+  background-color: yellow;
 }
 #main #sec4 .btns .btn2 .share:hover{
   background: #888888;
@@ -633,6 +634,11 @@
     width: 100%;
     font-size: 25px;
     height: 100%;
+    background-color: yellow;
+  }
+  #main #sec4 .btns .btn2 .share:hover{
+    background: #888888;
+    cursor: pointer;
   }
 
   /* 푸터 */
@@ -966,6 +972,11 @@
     width: 100%;
     font-size: 25px;
     height: 100%;
+    background-color: yellow;
+  }
+  #main #sec4 .btns .btn2 .share:hover{
+    background: #888888;
+    cursor: pointer;
   }
 
   /* 푸터 */
