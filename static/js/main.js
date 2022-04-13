@@ -25,6 +25,7 @@ function addItem(itemText, qIdx, iIdx) {
 
     //addEventListener: 지정한 이벤트가 대상에 전달될 떄마다 호출할 함수 설정
     //버튼을 누르면 다음 문제가 나올수 있도록 한다.
+    
     itemBtn.addEventListener("click", function () {
         var itemBtnAll = document.querySelectorAll('.iList');
         var status = document.querySelector('.statusBar');
@@ -46,12 +47,20 @@ function addItem(itemText, qIdx, iIdx) {
         //버튼을 선택할 때 마다 그 버튼의 iIdx값을 넣는다.
        ; //문제 출력 함수의 qIdx를 1증가해 다음 문제 불러옴
     }, false);
+    
 }
 
 //addQuestion() 문제 출력 함수
 function addQuestion(qIdx) {
+    //btn눌렸을 때 qidx - 1 값을 할당
+    let back = document.querySelector('#back')
+    back.addEventListener("click", function(){
+      qIdx = qIdx-1
+      addQuestion(qIdx)
+    })
+    
     //마지막 문제를 풀면 내가 선택한 답들을 출력
-    if (qIdx === endItem) {
+    if(qIdx === endItem) {
         getAnswer(select);
         window.location = 'result.html';
     }
@@ -86,3 +95,4 @@ function getAnswer(select) {
     })
 }
 
+// 문제 2번부터 버튼 활성화
