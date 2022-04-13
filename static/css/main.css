@@ -93,7 +93,7 @@ body{
   background-size: 100px 100px;
   position: absolute;
   bottom: 10px;
-  left: 45px;
+  left: 45%;
   border: none;
   cursor: inherit;
 }
@@ -109,14 +109,10 @@ body{
   left: 45%;
   border: none;
 }
-
-
-#back:active{
-  border:whitesmoke;
-}
-#back:visited{
-  border: whitesmoke;
-}
+#back:focus{ 	
+  border: none;
+  outline:none;
+  }
 .iList {
   font-weight: 100;
   width: 46%;

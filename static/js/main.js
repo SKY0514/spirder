@@ -56,7 +56,10 @@ function addQuestion(qIdx) {
     let back = document.querySelector('#back')
     back.addEventListener("click", function(){
       qIdx = qIdx-1
+      backDel(qIdx)
       addQuestion(qIdx)
+      
+
     })
     
     //마지막 문제를 풀면 내가 선택한 답들을 출력
@@ -67,6 +70,11 @@ function addQuestion(qIdx) {
     //0번쨰의 문제를 HTML에서 class이름이 problem_text인 곳에 출력
     var question = document.querySelector('#problem_text');
     question.innerHTML = mzQuestion[qIdx]["question"];
+    if(qIdx >=1){
+      back.disabled = false;
+    } else if(qIdx < 1){
+      back.disabled = true;
+    }
     //0번쨰의 item들을 출력해 addItem 함수에 파라미터으로 넣는다.
     //이떄 i는 몇번쨰의 문제인지의 값을 의미하기 때문에 addItem의 파라미터로 넣는다.
     for (let i in mzQuestion[qIdx]["item"]) {
@@ -80,7 +88,23 @@ function begin() {
     startbtn.style.display = 'none';
     let qIdx = 0;
     addQuestion(qIdx);
+    //버튼 사라지게 외부함수
 }
+// 이전버튼을 눌렀을때, 버튼사라지게 하는 함수
+function backDel(qIdx){
+    var itemBtnAll = document.querySelectorAll('.iList');
+    var status = document.querySelector('.statusBar');
+    status.style.width = (100/endItem) * (qIdx) + '%'; 
+    for (let i = 0; i < itemBtnAll.length; i++) {
+      itemBtnAll[i].disabled = true; //버튼 비 활성화
+      itemBtnAll[i].style.display = 'none';
+    }
+  
+    //버튼을 선택할 때 마다 그 버튼의 iIdx값을 넣는다.
+    //문제 출력 함수의 qIdx를 1증가해 다음 문제 불러옴
+}
+
+
 
 //사용자의 답안 서버로 저장하기 위해 보내기
 function getAnswer(select) {
