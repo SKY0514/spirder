@@ -96,6 +96,7 @@ body{
   left: 45%;
   border: none;
   cursor: inherit;
+  display: none;
 }
 #back {
   width: 100px;
@@ -167,6 +168,15 @@ button:hover{
 .btn:hover {
   color: #3c3e70;
 }
+@media(max-width: 1200px){
+  #div2 .background_image #problem_text {
+  font-size: 30px;
+  font-weight: 100;
+  width: 95%;
+  padding: 110px 60px 0px 60px;
+
+}
+}
 
 @media(max-width: 768px){
 body{
@@ -231,6 +241,36 @@ body{
   letter-spacing: 5px;
 }
 @media(min-width: 360px){
+  #back:disabled {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 78, 78, 0.45);
+  background-image: url(../images/pngwing.com.png);
+  background-position: center;
+  background-size: 100px 100px;
+  position: absolute;
+  bottom: -120px;
+  left: 40%;
+  border: none;
+  cursor: inherit;
+  display: none;
+}
+#back {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(90, 105, 213);
+  background-image: url(../images/pngwing.com.png);
+  background-position: center;
+  background-size: 100px 100px;
+  position: absolute;
+  bottom: -120px;
+  left: 40%;
+  border: none;
+}
+#back:focus{
+  border: none;
+  outline:none;
+  }
   body {
     width: 100%;
   } 

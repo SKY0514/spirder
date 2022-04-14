@@ -8,24 +8,8 @@ let problems = document.querySelector('.wrong_ul');
 for(let i = 0; i <= 9; i++){
     let ul = document.querySelector('.wrrate_ul')
     var pro = mzQuestion[i]['question']
-    // let tm = `$<li class="wrrate_li">
-    // <h4>${pro}</h4>
-    // <p>오답 <span>3</span>번 <span>억까</span> 47%</p>
-    // </li>`
-    // ul.appendChild(tm)
 }
 
-// 나의 포인트
-
-
-// 나의 유형
-
-
-// 평균 유형
-
-
-// 내가 틀린 답 : 클라이언트 답 번호와
-// 가장 많은 오답률 : 가장많이 오답선택번호와 퍼센티지
 
 let anserNm = document.querySelector('.anserNm')
 
@@ -181,39 +165,9 @@ function showAnswer() {
                                 <p>오답 <span class="anserNm2">${most_wrong_num[i]+1}</span>번 ${most_wrong[i]} ${most_wrong_percentage[i]}%</p>
                             </li>`
 
-                // function a(){
-                //     for(let i = 0; i <10; i++){
-                //         if(most_wrong[i] === mzQuestion[i]["item"][0]["list"]){
-                //             return 1;
-                //         }else if (most_wrong[i] == mzQuestion[i]["item"][1]["list"]){
-                //             return 2;
-                //         }else if (most_wrong[i] == mzQuestion[i]["item"][2]["list"]){
-                //             return 3;
-                //         }else if (most_wrong[i] == mzQuestion[i]["item"][3]["list"]) {
-                //             return 4;
-                //         }
-                //     }
-                // }
-
+            
 
                 $('.wrrate_ul').append(temp)
-
-
-
-
-                // for (let i = 0 ; i <10; i++){
-                //     function cho(){
-                //         if(most_wrong[1] == mzQuestion[1]['item'][0]){
-                //             return 1;
-                //             else if(most_wrong[1] == mzQuestion[1]['item'][1]){
-                //                 return 2;
-                //             } else if(most_wrong[1] == mzQuestion[1]['item'][2]){
-                //                 return 3;
-                //             } else if(most_wrong[1] == mzQuestion[1]['item'][3]){
-                //                 return 4;
-                //             }
-                //         }
-                // }
 
             }
 
@@ -221,7 +175,3 @@ function showAnswer() {
     })
 }
 
-
-// 내가 틀립답 답지도 함께
-// 오답률과 오답 번화와 오답선택지
-// 답 맞췄는데 불구하고 점수 0점
