@@ -7,15 +7,15 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
-  
+
 }
 
 /* 레이아웃 */
 
-#wrap{ 
+#wrap{
   width: 100%;
   background-color:rgb(90, 105, 213);
-  
+
 }
 #header {
   width: 100%;
@@ -62,13 +62,13 @@
   margin: 0 auto;
 }
 #main #sec1 #point h1{
-  
+
   font-size: 70px;
   margin-bottom: 20px;
   color: black;
 }
 #main #sec1 #point p{
-  
+
   font-size: 120px;
   color: black;
 }
@@ -130,8 +130,8 @@
   background-repeat: no-repeat;
   background-size: 400px 300px;
   margin: 0 auto 5px;
-  width: 300px;
-  height: 350px;
+  width: 80%;
+  height: 60%;
   margin-top: -10px;
 
 
@@ -187,12 +187,13 @@
   background-repeat: no-repeat;
   background-size: 400px 300px;
   margin: 0 auto 5px;
-  width: 300px;
-  height: 350px;
+  width: 80%;
+  height: 60%;
   margin-top: -10px;
 }
 /* 섹션 3 */
 #main #sec3{
+  height: 700px;
   margin-top: 30px;
   padding-top: 50px;
   background-color: whitesmoke;
@@ -203,7 +204,7 @@
   height: 600px;
   margin: 0 auto;
   display: flex;
-  
+
 }
 #main #sec3 #wrong_answer h2 {
   margin: 15px auto 5px;
@@ -228,7 +229,7 @@
   margin: 0 auto;
 }
 #main #sec3 #wrong_answer .wr .wrong_ul .wrong_li2{
- 
+
 }
 
 #main #sec3 #wrong_answer .wr .wrong_ul .wrong_li h4{}
@@ -281,6 +282,7 @@
   width: 100%;
   font-size: 30px;
   height: 100%;
+  background-color: yellow;
 }
 #main #sec4 .btns .btn2 .share:hover{
   background: #888888;
@@ -317,13 +319,20 @@
 
 
 
-@media all and (max-width: 768px) {
-<<<<<<< HEAD
-=======
+@media (max-width: 768px) {
+  .wrrate_ul{
+    width: 100%;
+  }
+  .wrong_li1{
+    margin: auto;
+    width: 80%;
+  }
+  body{
+    width: 100%;
+  }
   #logosp {
     margin-left: -20px;
   }
->>>>>>> master
   #wrap {
     width: 100%;
     background-color: rgb(90, 105, 213);
@@ -350,27 +359,15 @@
 
   /* 헤더 */
   #header #logo {
-<<<<<<< HEAD
-    display: inline-block;
-    background-image: url(../images/free-icon-tarantula-4484333.png);
-    background-size: 60% 80px;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 10%;
-    height: 80px;
-    font-size: 40px;
-    font-weight: bold;
-=======
     text-align: center;
     display: inline-block;
     background-image: url(../images/free-icon-tarantula-4484333.png);
     background-size: 80px 80px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 80px;
+    width: 20%;
     height: 80px;
     font-size: 40px;
->>>>>>> master
     color: #ffffff;
   }
 
@@ -410,10 +407,7 @@
   /* 섹션 2 */
   #main #sec2 {
     background-color: rgb(90, 105, 213);
-<<<<<<< HEAD
-=======
-    height: 750px;
->>>>>>> master
+    height: 1300px;
   }
 
   #main #sec2 #cate {
@@ -425,19 +419,13 @@
   }
 
   #main #sec2 #cate .category1 {
-<<<<<<< HEAD
+
     background-color: #ffffff;
     width: 100%;
-    border-radius: 20px;
-=======
-  
-    background-color: #ffffff;
-    width: 300px;
-    height: 350px;
+    height: 600px;
     border-radius: 20px;
     margin-top: 25px;
     margin-bottom: 25px;
->>>>>>> master
   }
 
   #main #sec2 #cate .category1 h2 {
@@ -465,21 +453,21 @@
     font-size: 15px;
     color: black;
     font-weight: 100;
-    width: 80%;
+    width: 95%;
 
   }
 
   #main #sec2 #cate .category1 .cateimg {
-
-    background-position: center;
+       background-position: center;
     background-repeat: no-repeat;
-    background-size: 400px 300px;
+    background-size: 100% 80%;
     margin: 0 auto 5px;
-    width: 150px;
-    height: 175px;
+    width: 80%;
+    height: 60%;
     margin-top: -10px;
+}
 
-  }
+
 
   #main #sec2 #cate .category2 .title1 {
     font-size: 20px;
@@ -491,23 +479,17 @@
     font-size: 15px;
     color: black;
     font-weight: 100;
-    width: 100%;
+    width: 95%;
 
   }
 
 
   #main #sec2 #cate .category2 {
     background-color: #ffffff;
-<<<<<<< HEAD
     width: 100%;
     border-radius: 20px;
-    margin-left: 15px;
-=======
-    width: 300px;
-    border-radius: 20px;
-    height: 350px;
+    height: 600px;
     margin: 0;
->>>>>>> master
   }
 
   #main #sec2 #cate .category2 h2 {
@@ -540,30 +522,27 @@
   #main #sec2 #cate .category2 .cateimg1 {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 400px 300px;
+    background-size: 100% 80%;
     margin: 0 auto 5px;
-    width: 300px;
-    height: 350px;
+    width: 80%;
+    height: 60%;
     margin-top: -10px;
   }
 
   /* 섹션 3 */
   #main #sec3 {
-    margin-top: 30px;
+    width: 100%;
     padding-top: 50px;
     background-color: whitesmoke;
+    height: 1300px;
+
   }
 
   #main #sec3 #wrong_answer {
     background-color: whitesmoke;
-<<<<<<< HEAD
-    width: 70%;
-=======
-    width: 300px;
->>>>>>> master
+    width: 80%;
     height: 600px;
     margin: 0 auto;
-    display: flex;
     display: inline-block;
 
   }
@@ -576,20 +555,12 @@
   }
 
   #main #sec3 #wrong_answer .wr {
-<<<<<<< HEAD
-    background-color: #ffffff;
-    width: 50%;
-    height: 100%;
-    border-radius: 20px;
-    margin-right: 15px;
-=======
     background-repeat: no-repeat;
     background-size: 400px 300px;
-    width: 300px;
-    height: 350px;
+    width: 100%;
+    height: 700px;
     margin: 0 auto;
-  
->>>>>>> master
+
   }
 
   #main #sec3 #wrong_answer .wr .wrong_ul {
@@ -617,37 +588,22 @@
 
   #main #sec3 #wrong_answer .wrrate {
     background-color: #ffffff;
-<<<<<<< HEAD
-    width: 50%;
-    border-radius: 20px;
-    margin-left: 15px;
-=======
     width: 100%;
     border-radius: 20px;
-    margin-left: 15px;
-    height: 350px;
+    height: 700px;
     margin: 0 auto;
->>>>>>> master
   }
 
 
   /* 섹션 4 */
   #main #sec4 {
-<<<<<<< HEAD
-    padding: 50px;
-=======
     padding:200px 0 50px 0;
->>>>>>> master
     background-color: whitesmoke;
 
   }
 
   #main #sec4 .btns {
-<<<<<<< HEAD
     width: 50%;
-=======
-    width: 80%;
->>>>>>> master
     margin: 20px auto;
   }
 
@@ -657,11 +613,7 @@
     color: black;
     display: block;
     border-radius: 20px;
-<<<<<<< HEAD
-    width: 355px;
-=======
-    width: 300px;
->>>>>>> master
+    width: 100%;
     font-size: 25px;
     height: 60px;
     background-color: rgb(52, 208, 149);
@@ -671,11 +623,7 @@
   #main #sec4 .btns .btn2 {
     margin-top: 20px;
     border-radius: 10px;
-<<<<<<< HEAD
-    width: 50%;
-=======
-    width: 300px;
->>>>>>> master
+    width: 100%;
     height: 60px;
     display: flex;
     display: inline-block;
@@ -686,22 +634,19 @@
     width: 100%;
     font-size: 25px;
     height: 100%;
+    background-color: yellow;
+  }
+  #main #sec4 .btns .btn2 .share:hover{
+    background: #888888;
+    cursor: pointer;
   }
 
   /* 푸터 */
   #footer .fot1 {
     position: absolute;
-<<<<<<< HEAD
-    width: 80%;
-    margin: 0 100px;
-
-    height: 100%;
-    padding: 20px;
-=======
     width: 100%;
     margin: 0 10px;
     height: 100%;
->>>>>>> master
   }
 
   #footer .fot1 hr {
@@ -726,8 +671,10 @@
 }
 
 
-
-@media all and (max-width: 375px) {
+@media(max-width: 360px) {
+  body{
+    width: 100%;
+  }
   #wrap {
     width: 100%;
     background-color: rgb(90, 105, 213);
@@ -759,7 +706,7 @@
     background-size: 60% 80px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 10%;
+    width: 40%;
     height: 80px;
     font-size: 40px;
     font-weight: bold;
@@ -802,6 +749,7 @@
   /* 섹션 2 */
   #main #sec2 {
     background-color: rgb(90, 105, 213);
+    height: 900px;
   }
 
   #main #sec2 #cate {
@@ -809,20 +757,14 @@
     width: 70%;
     height: 600px;
     margin: 0 auto;
-    display: flex;
 
   }
 
   #main #sec2 #cate .category1 {
     background-color: #ffffff;
-    width: 50%;
-<<<<<<< HEAD
-    height: 600px;
-=======
-    height: 300px;
->>>>>>> master
+    width: 100%;
+    height: 400px;
     border-radius: 20px;
-    margin-right: 15px;
 
 
   }
@@ -862,14 +804,12 @@
 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 400px 300px;
+    background-size: 100% 200px;
     margin: 0 auto 5px;
-    width: 150px;
-    height: 175px;
-    margin-top: -10px;
-
-
-  }
+    width: 80%;
+    height: 200px;
+    margin-top: 10px;
+}
 
   #main #sec2 #cate .category2 .title1 {
     font-size: 20px;
@@ -889,14 +829,9 @@
 
   #main #sec2 #cate .category2 {
     background-color: #ffffff;
-    width: 50%;
-<<<<<<< HEAD
-    height: 100%;
-=======
-    height: 250px;
->>>>>>> master
+    width: 100%;
+    height: 400px;
     border-radius: 20px;
-    margin-left: 15px;
   }
 
   #main #sec2 #cate .category2 h2 {
@@ -927,18 +862,19 @@
   }
 
   #main #sec2 #cate .category2 .cateimg1 {
-    background-position: center;
+   background-position: center;
     background-repeat: no-repeat;
-    background-size: 400px 300px;
+    background-size: 100% 200px;
     margin: 0 auto 5px;
-    width: 300px;
-    height: 350px;
-    margin-top: -10px;
+    width: 80%;
+    height: 200px;
+    margin-top: 10px;
+
   }
 
   /* 섹션 3 */
   #main #sec3 {
-    margin-top: 30px;
+    height: 1800px;
     padding-top: 50px;
     background-color: whitesmoke;
   }
@@ -946,9 +882,8 @@
   #main #sec3 #wrong_answer {
     background-color: whitesmoke;
     width: 70%;
-    height: 600px;
+    height: 1000px;
     margin: 0 auto;
-    display: flex;
 
   }
 
@@ -961,10 +896,10 @@
 
   #main #sec3 #wrong_answer .wr {
     background-color: #ffffff;
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 85%;
     border-radius: 20px;
-    margin-right: 15px;
+
   }
 
   #main #sec3 #wrong_answer .wr .wrong_ul {
@@ -992,10 +927,9 @@
 
   #main #sec3 #wrong_answer .wrrate {
     background-color: #ffffff;
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 85%;
     border-radius: 20px;
-    margin-left: 15px;
   }
 
 
@@ -1017,7 +951,7 @@
     color: black;
     display: block;
     border-radius: 20px;
-    width: 138px;
+    width: 100%;
     font-size: 25px;
     height: 50px;
     background-color: rgb(52, 208, 149);
@@ -1038,16 +972,21 @@
     width: 100%;
     font-size: 25px;
     height: 100%;
+    background-color: yellow;
+  }
+  #main #sec4 .btns .btn2 .share:hover{
+    background: #888888;
+    cursor: pointer;
   }
 
   /* 푸터 */
   #footer .fot1 {
     position: absolute;
-    width: 80%;
+    width: 100%;
     margin: 0 20px;
-
     height: 100%;
-    padding: 20px;
+    padding: 0;
+
   }
 
   #footer .fot1 hr {
@@ -1068,5 +1007,11 @@
     text-align: initial;
     font-family: sans-serif;
     color: #888888;
+  }
+  .wrrate_ul{
+    width: 100%;
+  }
+  .wrong_li1{
+    width: 80%;
   }
 }

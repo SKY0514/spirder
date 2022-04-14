@@ -8,16 +8,16 @@
         imageUrl:
           'https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/726/57a5b86ea74e692c0c356bb3ed9fad18_res.jpeg',
         link: {
-          mobileWebUrl: 'http://mzquiz.site/result.html',
-          webUrl: 'http://mzquiz.site/result.html',
+          mobileWebUrl: 'http://mzquiz.site',
+          webUrl: 'http://mzquiz.site',
         },
       },
       buttons: [
         {
           title: 'TEST 시작하기',
           link: {
-            mobileWebUrl: 'http://mzquiz.site/result.html',
-            webUrl: 'http://mzquiz.site/result.html',
+            mobileWebUrl: 'http://mzquiz.site',
+            webUrl: 'http://mzquiz.site',
           },
         },
       ],
